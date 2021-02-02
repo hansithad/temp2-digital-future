@@ -83,7 +83,7 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
               <br/>
               <TypedText
                   component="span"
-                  variant="h4"
+                  variant="h5"
                   color="secondary"
                   className={classes.fontWeight900}
                   typedProps={{
