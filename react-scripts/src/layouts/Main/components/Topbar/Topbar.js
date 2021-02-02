@@ -133,20 +133,27 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   const landings = pages.landings;
   const supportedPages = pages.pages;
   const account = pages.account;
+  const cloudProducts = pages.cloudProducts;
+  const businessSolutions = pages.businessSolutions;
+  const staffAugmentation = pages.staffAugmentation;
+  const resources = pages.resources;
 
   const MenuGroup = props => {
     const { item } = props;
     return (
       <List disablePadding>
-        <ListItem disableGutters>
-          <Typography
-            variant="body2"
-            color="primary"
-            className={classes.menuGroupTitle}
-          >
-            {item.groupTitle}
-          </Typography>
-        </ListItem>
+          {
+              item.groupTitle && <ListItem disableGutters>
+                  <Typography
+                      variant="body2"
+                      color="primary"
+                      className={classes.menuGroupTitle}
+                  >
+                      {item.groupTitle}
+                  </Typography>
+              </ListItem>
+          }
+
         {item.pages.map((page, i) => (
           <ListItem disableGutters key={i} className={classes.menuGroupItem}>
             <Typography
@@ -226,6 +233,40 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
     );
   };
 
+  const CloudProductPages = () => {
+    const { products } = cloudProducts.children;
+    return (
+      <div className={classes.menu}>
+        <div className={classes.menuItem}>
+          <MenuGroup item={products} />
+        </div>
+      </div>
+    );
+  };
+
+  const BusinessSolutionsPages = () => {
+    const { solutions } = businessSolutions.children;
+    return (
+      <div className={classes.menu}>
+        <div className={classes.menuItem}>
+          <MenuGroup item={solutions} />
+        </div>
+      </div>
+    );
+  };
+
+  const StaffAugmentationPages = () => {
+    return (
+      ''
+    );
+  };
+
+  const ResourcesPages = () => {
+    return (
+      ''
+    );
+  };
+
   const renderPages = id => {
     if (id === 'landing-pages') {
       return <LandingPages />;
@@ -235,6 +276,14 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
     }
     if (id === 'account') {
       return <AccountPages />;
+    }
+
+    if (id === 'cloud-products') {
+      return <CloudProductPages />;
+    }
+
+    if (id === 'business-solutions') {
+      return <BusinessSolutionsPages />;
     }
   };
 
@@ -253,7 +302,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
       <div className={classes.flexGrow} />
       <Hidden smDown>
         <List disablePadding className={classes.navigationContainer}>
-          {[landings, supportedPages, account].map((page, i) => (
+          {[cloudProducts,businessSolutions].map((page, i) => (
             <div key={page.id}>
               <ListItem
                 aria-describedby={page.id}
@@ -299,18 +348,48 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
               </Popover>
             </div>
           ))}
+        {[staffAugmentation,resources].map((page, i) => (
+            <div key={page.id}>
+                <ListItem
+                    aria-describedby={page.id}
+                    onClick={e => handleClick(e, page.id)}
+                    className={clsx(
+                        classes.listItem,
+                        openedPopoverId === page.id ? classes.listItemActive : '',
+                    )}
+                >
+                    <Typography
+                        variant="body1"
+                        color="textPrimary"
+                        className={clsx(classes.listItemText, 'menu-item')}
+                    >
+                        {page.title}
+                    </Typography>
+                </ListItem>
+                <Popover
+                    elevation={1}
+                    id={page.id}
+                    open={openedPopoverId === page.id}
+                    anchorEl={anchorEl}
+                    onClose={handleClose}
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'center',
+                    }}
+                    transformOrigin={{
+                        vertical: 'top',
+                        horizontal: 'center',
+                    }}
+                    classes={{ paper: classes.popover }}
+                >
+                    <div>{renderPages(page.id)}</div>
+                </Popover>
+            </div>
+        ))}
           <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
             <DarkModeToggler themeMode={themeMode} onClick={() => themeToggler()} />
           </ListItem>
-          <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
-            <Button
-              variant="outlined"
-              component="a"
-              href="/documentation"
-            >
-              Documentation
-            </Button>
-          </ListItem>
+
           <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
             <Button
               variant="contained"
@@ -320,7 +399,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
               href="https://material-ui.com/store/items/the-front-landing-page/"
               className={classes.listItemButton}
             >
-              Buy Now
+              Contact
             </Button>
           </ListItem>
         </List>

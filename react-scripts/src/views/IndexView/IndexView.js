@@ -21,22 +21,22 @@ const IndexView = ({ themeMode }) => {
   return (
     <div>
       <Hero themeMode={themeMode} />
-      <Services />
-      <SectionAlternate className={classes.sectionAlternateNoPaddingTop}>
-        <QuickStart />
-      </SectionAlternate>
-      <SectionAlternate>
-        <Features />
-      </SectionAlternate>
-      <Section>
-        <Reviews />
-      </Section>
-      <Section className={classes.dividerSection}>
-        <Divider />
-      </Section>
-      <Section narrow>
-        <GetStarted />
-      </Section>
+      {/*<Services />*/}
+      {/*<SectionAlternate className={classes.sectionAlternateNoPaddingTop}>*/}
+        {/*<QuickStart />*/}
+      {/*</SectionAlternate>*/}
+      {/*<SectionAlternate>*/}
+        {/*<Features />*/}
+      {/*</SectionAlternate>*/}
+      {/*<Section>*/}
+        {/*<Reviews />*/}
+      {/*</Section>*/}
+      {/*<Section className={classes.dividerSection}>*/}
+        {/*<Divider />*/}
+      {/*</Section>*/}
+      {/*<Section narrow>*/}
+        {/*<GetStarted />*/}
+      {/*</Section>*/}
     </div>
   );
 };

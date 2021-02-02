@@ -20,6 +20,78 @@ const Main = ({ children, themeToggler, themeMode }) => {
   });
 
   const pages = {
+    cloudProducts:{
+        title: 'Cloud Products',
+        id: 'cloud-products',
+        children:{
+            products: {
+                groupTitle: '',
+                pages: [
+                    {
+                        title: 'Google Workspace Business',
+                        href: '/coworking',
+                    },
+                    {
+                        title: 'Google Workspace Enterprise',
+                        href: '/rental',
+                    },
+                    {
+                        title: 'Chrome Enterprise',
+                        href: '/job-listing',
+                    },
+                    {
+                        title: 'Meet Hardware',
+                        href: '/e-learning',
+                    },
+                    {
+                        title: 'Google BigQuery',
+                        href: '/e-commerce',
+                    },
+                    {
+                        title: 'Data Dashboards',
+                        href: '/expo',
+                    },
+                ],
+            },
+        }
+    },
+    businessSolutions:{
+        title: 'Business Solutions',
+        id: 'business-solutions',
+        children:{
+            solutions: {
+                groupTitle: '',
+                pages: [
+                    {
+                        title: 'Digital & Remote Workplace',
+                        href: '/coworking',
+                    },
+                    {
+                        title: 'Data Management',
+                        href: '/rental',
+                    },
+                    {
+                        title: 'Cloud for Marketing',
+                        href: '/job-listing',
+                    }
+                ]
+            },
+        }
+    },
+    staffAugmentation:{
+        title: 'Staff Augmentation',
+        id: 'staff-augmentation',
+        children:{
+
+        }
+    },
+    resources:{
+        title: 'Resources',
+        id: 'resources',
+        children:{
+
+        }
+    },
     landings: {
       title: 'Landings',
       id: 'landing-pages',

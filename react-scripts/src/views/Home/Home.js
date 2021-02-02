@@ -36,7 +36,7 @@ const Home = ({ themeMode }) => {
               variant="contained"
               color="primary"
             >
-              Contact
+              Buy Now
             </Button>
           ]}
         />
