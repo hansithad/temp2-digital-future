@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from '@material-ui/core';
+import {Typography, useMediaQuery} from '@material-ui/core';
 import { Grid, Button, Avatar } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
@@ -28,17 +28,13 @@ const Integrations = props => {
   return (
     <div className={className} data-aos="fade-up" {...rest}>
       <SectionHeader
-        title="Integrations"
-        subtitle="TheFront integrates with all the tools you love and use, to allow you to work smarter and faster."
-        ctaGroup={[
-          <Button
-            variant="outlined"
-            size={isMd ? 'large' : 'medium'}
-            color="primary"
-          >
-            See all integrations
-          </Button>,
-        ]}
+        title={
+        <span>
+            Everything you need to get anything done{' '}
+            <Typography color="secondary" variant="inherit" component="span">now in one place</Typography>
+          </span>
+    }
+        subtitle="An integrated workspace that lets you spend less time manajng your work and more time actually doing it"
         fadeUp
       />
       <Grid container spacing={4}>

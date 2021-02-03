@@ -92,18 +92,6 @@ const GoogleWorkSpaceBusiness = () => {
         <Section>
           <Divider />
         </Section>
-        <VideoSection />
-        <Section>
-          <Divider />
-        </Section>
-        <Advantages data={advantages} />
-        <Section>
-          <Divider />
-        </Section>
-        <Reviews data={reviews} />
-        <Section>
-          <Divider />
-        </Section>
         <Integrations data={integrations} />
         <Section>
           <Divider />
