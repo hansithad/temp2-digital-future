@@ -51,7 +51,7 @@ const About = props => {
                     color="primary"
                     size={isMd ? 'large' : 'medium'}
                   >
-                    Learn more
+                      SEE WORKSPACE APPS
                   </Button>,
                 ]}
                 align={isMd ? 'left' : 'center'}
