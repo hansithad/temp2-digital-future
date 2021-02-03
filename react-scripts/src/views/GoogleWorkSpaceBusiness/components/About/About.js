@@ -31,7 +31,7 @@ const About = props => {
               <SectionHeader
                 title={
                   <span>
-                    Cloud Based Office Suite....&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
+                    Cloud Based Office Suite.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
                     <Typography component="span" variant="inherit" color="primary">
                       Powered and Used by Google for Remote Work.
                     </Typography>{' '}
@@ -57,35 +57,6 @@ const About = props => {
                 align={isMd ? 'left' : 'center'}
                 disableGutter
               />
-            </Grid>
-            <Grid item xs={12}>
-              <Typography
-                variant="h6"
-                color="primary"
-                align={isMd ? 'left' : 'center'}
-                gutterBottom
-              >
-                TRUSTED BY:
-              </Typography>
-              <Grid container justify="space-between">
-                {data.map((partner, index) => (
-                  <Grid
-                    item
-                    container
-                    justify="center"
-                    xs={6}
-                    sm={2}
-                    key={index}
-                  >
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      className={classes.promoLogo}
-                      lazy={false}
-                    />
-                  </Grid>
-                ))}
-              </Grid>
             </Grid>
           </Grid>
         </Grid>
