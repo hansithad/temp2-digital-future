@@ -31,14 +31,13 @@ const About = props => {
               <SectionHeader
                 title={
                   <span>
-                    Guaranted{' '}
+                    Cloud Based Office Suite....&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
                     <Typography component="span" variant="inherit" color="primary">
-                      Company Growth
+                      Powered and Used by Google for Remote Work.
                     </Typography>{' '}
-                    with Targeted Leads
                   </span>
                 }
-                subtitle="We will help you to understand your leads and you will increase your company growth by converting the qualified leads into sales."
+                subtitle="Everything your employees need for remote, real-time, efficient collaboration. Available from anywhere, anytime, from any device. With enterprise data security level."
                 ctaGroup={[
                   <Button
                     variant="contained"
