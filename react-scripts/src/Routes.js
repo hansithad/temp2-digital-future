@@ -20,6 +20,7 @@ import {
   Elearning as ElearningView,
   Enterprise as EnterpriseView,
   Service as ServiceView,
+  GoogleWorkSpaceBusiness as GoogleWorkSpaceBusinessView,
   WebBasic as WebBasicView,
   DesktopApp as DesktopAppView,
   Expo as ExpoView,
@@ -167,6 +168,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={ServiceView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/google-workspace-business"
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={GoogleWorkSpaceBusinessView}
             layout={MainLayout}
           />
         )}

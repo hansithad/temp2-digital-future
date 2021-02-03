@@ -9,6 +9,7 @@ export { default as Coworking } from './Coworking';
 export { default as Elearning } from './Elearning';
 export { default as Enterprise } from './Enterprise';
 export { default as Service } from './Service';
+export { default as GoogleWorkSpaceBusiness } from './GoogleWorkSpaceBusiness';
 export { default as WebBasic } from './WebBasic';
 export { default as DesktopApp } from './DesktopApp';
 export { default as Expo } from './Expo';

@@ -29,7 +29,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
                 pages: [
                     {
                         title: 'Google Workspace Business',
-                        href: '/coworking',
+                        href: '/google-workspace-business',
                     },
                     {
                         title: 'Google Workspace Enterprise',
