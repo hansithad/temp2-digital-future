@@ -60,6 +60,10 @@ const SidebarNav = props => {
   const landings = pages.landings;
   const supportedPages = pages.pages;
   const account = pages.account;
+  const cloudProducts = pages.cloudProducts;
+  const businessSolutions = pages.businessSolutions;
+  const staffAugmentation = pages.staffAugmentation;
+  const resources = pages.resources;
 
   const MenuGroup = props => {
     const { item } = props;
@@ -107,45 +111,37 @@ const SidebarNav = props => {
     );
   };
 
-  const SupportedPages = () => {
-    const {
-      career,
-      helpCenter,
-      company,
-      contact,
-      blog,
-      portfolio,
-    } = supportedPages.children;
+  const CloudProductPages = () => {
+    const { products } = cloudProducts.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={career} />
-          <MenuGroup item={helpCenter} />
-          <MenuGroup item={company} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={contact} />
-          <MenuGroup item={blog} />
-          <MenuGroup item={portfolio} />
+          <MenuGroup item={products} />
         </div>
       </div>
     );
   };
 
-  const AccountPages = () => {
-    const { settings, signup, signin, password, error } = account.children;
+  const BusinessSolutionsPages = () => {
+    const { solutions } = businessSolutions.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
-          <MenuGroup item={settings} />
-          <MenuGroup item={signup} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={signin} />
-          <MenuGroup item={password} />
-          <MenuGroup item={error} />
+          <MenuGroup item={solutions} />
         </div>
       </div>
+    );
+  };
+
+  const StaffAugmentationPages = () => {
+    return (
+      ''
+    );
+  };
+
+  const ResourcesPages = () => {
+    return (
+      ''
     );
   };
 
@@ -158,37 +154,34 @@ const SidebarNav = props => {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Typography variant="h6" color="textPrimary" gutterBottom>
-          Landings
+          Cloud Product
         </Typography>
-        <LandingPages />
+        <CloudProductPages />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Typography variant="h6" color="textPrimary" gutterBottom>
-          Pages
+          Business Solutions
         </Typography>
-        <SupportedPages />
+        <BusinessSolutionsPages />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Typography variant="h6" color="textPrimary" gutterBottom>
-          Account
+          Staff Augmentation
         </Typography>
-        <AccountPages />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          variant="outlined"
-          fullWidth
-          component="a"
-          href="/documentation"
-        >
-          Documentation
-        </Button>
+        <Divider className={classes.divider} />
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Typography variant="h6" color="textPrimary" gutterBottom>
+          Resources
+        </Typography>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
@@ -199,7 +192,7 @@ const SidebarNav = props => {
           target="blank"
           href="https://material-ui.com/store/items/the-front-landing-page/"
         >
-          Buy Now
+          Contact
         </Button>
       </ListItem>
     </List>
