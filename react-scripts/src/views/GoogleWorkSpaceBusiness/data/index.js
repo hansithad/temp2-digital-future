@@ -126,27 +126,27 @@ export const integrations = [
 
 export const customizations = [
   {
-    title: '3rd-Party Integrations',
+    title: 'Consulting and Implementation',
     icon: 'fas fa-plug',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'We offer a full scope of activation, data migration and change management services. Everything that is needed to execute stress free implementation.',
   },
   {
-    title: 'Meets Privacy Requirements',
+    title: 'Data Security Support & Trainings',
     description:
-      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'Best in class expertise engaged to secure your internal data. You can outsource security administration to us or have us train your IT team.',
     icon: 'fas fa-lock',
   },
   {
-    title: 'Marketing & Sales Collateral',
+    title: 'User Support & Trainings',
     description:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      'Get your employees up to speed with Google Workspace through our user support services and Workspace Apps trainings.',
     icon: 'fas fa-hand-holding-heart',
   },
   {
-    title: 'Integrates With Most Hardware',
+    title: 'Google Cloud Partner Benefits',
     description:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'As Partner Program member we offer exclusive benefits to our clients: 30 days free trial period, individual pricing, Google certified staff.',
     icon: 'fas fa-plus',
   },
 ];

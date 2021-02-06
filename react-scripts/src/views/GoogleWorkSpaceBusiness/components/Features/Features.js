@@ -27,18 +27,18 @@ const Features = props => {
       <SectionHeader
         title={
           <span>
-            A Website Builder Tool that{' '}
-            <Typography color="secondary" variant="inherit" component="span">Works for You</Typography>
+            Implementation and Maintenance{' '}
+            <Typography color="secondary" variant="inherit" component="span">with Digital Future</Typography>
           </span>
         }
-        subtitle="Companies from across the globe have had fantastic experiences using TheFront."
+        subtitle="As officially certified Google Workspace Partner we offer comprehensive services and know-how."
         ctaGroup={[
           <Button
             variant="outlined"
             size={isMd ? 'large' : 'medium'}
             color="secondary"
           >
-            See all integrations
+            ASK ABOUT OUR SERVICES
           </Button>,
         ]}
         fadeUp
@@ -70,12 +70,6 @@ const Features = props => {
                 align="left"
               />
               <div style={{ flexGrow: 1 }} />
-              <LearnMoreLink
-                title="Learn more"
-                variant="body1"
-                className={classes.learnMoreLink}
-                color="secondary"
-              />
             </CardBase>
           </Grid>
         ))}

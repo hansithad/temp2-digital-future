@@ -92,11 +92,11 @@ const GoogleWorkSpaceBusiness = () => {
         <Section>
           <Divider />
         </Section>
-        <Integrations data={integrations} />
+        <Features data={customizations} />
         <Section>
           <Divider />
         </Section>
-        <Features data={customizations} />
+        <Integrations data={integrations} />
         <Section>
           <Divider />
         </Section>
