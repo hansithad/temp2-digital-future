@@ -101,17 +101,19 @@ const GoogleWorkSpaceBusiness = () => {
           <Divider />
         </Section>
         <Integrations data={integrations} />
-          <SectionAlternate>
-            <MobileFeatures data={mobileFeatures} />
-          </SectionAlternate>
-          <Section>
-            <Pricings data={pricings} />
-          </Section>
+
+
         <Section>
           <Divider />
         </Section>
         <Team data={team} />
         </>
+      </Section>
+      <SectionAlternate>
+        <MobileFeatures data={mobileFeatures} />
+      </SectionAlternate>
+      <Section>
+        <Pricings data={pricings} />
       </Section>
       <Divider />
       <AppBar position="fixed" className={classes.appBarBottom}>
