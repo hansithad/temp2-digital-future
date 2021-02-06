@@ -11,11 +11,18 @@ import {
   ListItemText,
   Typography,
   Avatar,
+  Icon, Button
 } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { SectionHeader, IconAlternate } from 'components/molecules';
+import YourLogo from './mailicon.svg'
+
 
 const useStyles = makeStyles(theme => ({
+
+  paddedSubHead:{
+    padding:'18px'
+  },
   listItemAvatar: {
     marginRight: theme.spacing(2),
   },
@@ -49,6 +56,17 @@ const MobileFeatures = props => {
 
   return (
     <div className={className} {...rest}>
+      <SectionHeader
+        title="Why Google Workspace?"
+        subtitle={
+          <span className={classes.paddedSubHead}>
+            Forrester has led a research on a model organization and calculated the impact implementing Google Workspace:171hrs more per user per year spent on actual work 20% less on-demand IT tech support time needed.the risk of data breach decreased 95%
+          </span>
+          }
+        fadeUp
+      />
+
+
       <Grid container spacing={isMd ? 4 : 2}>
         <Grid item xs={12}>
           <Grid container spacing={isMd ? 4 : 2}>
@@ -87,11 +105,14 @@ const MobileFeatures = props => {
                 {items.map((item, index) => (
                   <ListItem key={index} disableGutters data-aos="fade-up">
                     <ListItemAvatar className={classes.listItemAvatar}>
-                      <IconAlternate
-                        size="small"
-                        fontIconClass={item.icon}
-                        color={colors.deepOrange}
-                      />
+                      {/*<IconAlternate*/}
+                        {/*size="small"*/}
+                        {/*fontIconClass={item.icon}*/}
+                        {/*color={colors.deepOrange}*/}
+                      {/*/>*/}
+                      <Icon>
+                        <img src={YourLogo} height={50} width={50}/>
+                      </Icon>
                     </ListItemAvatar>
                     <ListItemText
                       primary={item.title}
