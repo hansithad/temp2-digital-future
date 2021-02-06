@@ -6,6 +6,7 @@ import { Grid, Typography, Button,CardMedia } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import home from "./home-intro.mp4";
+import clsx from "clsx";
 
 const useStyles = makeStyles(theme => ({
   promoLogo: {
@@ -30,12 +31,14 @@ const About = props => {
             <Grid item xs={12}>
               <SectionHeader
                 title={
+                  <div>
+                  <p>Cloud Based Office Suite.{' '}</p>
                   <span>
-                    Cloud Based Office Suite.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
                     <Typography component="span" variant="inherit" color="primary">
                       Powered and Used by Google for Remote Work.
                     </Typography>{' '}
                   </span>
+                  </div>
                 }
                 subtitle="Everything your employees need for remote, real-time, efficient collaboration. Available from anywhere, anytime, from any device. With enterprise data security level."
                 ctaGroup={[
