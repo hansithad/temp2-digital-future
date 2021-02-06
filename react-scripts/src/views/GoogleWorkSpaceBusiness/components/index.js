@@ -5,3 +5,5 @@ export { default as Integrations } from './Integrations';
 export { default as Reviews } from './Reviews';
 export { default as Team } from './Team';
 export { default as VideoSection } from './VideoSection';
+export { default as MobileFeatures } from './MobileFeatures';
+export { default as Pricings } from './Pricings';

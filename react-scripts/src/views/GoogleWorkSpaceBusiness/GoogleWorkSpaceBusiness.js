@@ -8,7 +8,7 @@ import {
   Drawer,
 } from '@material-ui/core';
 import ForumIcon from '@material-ui/icons/Forum';
-import { Section, ContactForm } from 'components/organisms';
+import { Section, ContactForm, SectionAlternate } from 'components/organisms';
 import {
   About,
   Advantages,
@@ -17,6 +17,8 @@ import {
   Reviews,
   Team,
   VideoSection,
+  MobileFeatures,
+  Pricings
 } from './components';
 
 import {
@@ -26,7 +28,9 @@ import {
   integrations,
   customizations,
   team,
+  mobileFeatures
 } from './data';
+import {pricings} from "../MobileApp/data";
 
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
@@ -97,6 +101,12 @@ const GoogleWorkSpaceBusiness = () => {
           <Divider />
         </Section>
         <Integrations data={integrations} />
+          <SectionAlternate>
+            <MobileFeatures data={mobileFeatures} />
+          </SectionAlternate>
+          <Section>
+            <Pricings data={pricings} />
+          </Section>
         <Section>
           <Divider />
         </Section>
