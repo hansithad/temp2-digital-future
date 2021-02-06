@@ -14,11 +14,13 @@ import {
 import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import { Section, SectionAlternate,ContactForm,CardBase } from 'components/organisms';
-import { GetStarted, Features, Reviews, QuickStart, Services, Hero } from './components';
+import { GetStarted, Features, Reviews,
+  QuickStart, Services, Hero, About, Integrations } from './components';
 import ForumIcon from "@material-ui/icons/Forum";
 import clsx from "clsx";
 import gcPartnerImage from '../../assets/images/GC-Partner-no_outline-V.png';
 import * as colors from "@material-ui/core/colors";
+import {integrations} from "../DesignCompany/data";
 
 const useStyles = makeStyles((theme) => ({
   sectionAlternateNoPaddingTop: {
@@ -136,6 +138,12 @@ const IndexView = ({ themeMode }) => {
             />
           </Grid>
         </Grid>
+      </Section>
+      <SectionAlternate className={classes.sectionAlternate}>
+        <About />
+      </SectionAlternate>
+      <Section>
+        <Integrations data={integrations} />
       </Section>
       <Divider />
       <AppBar position="fixed" className={classes.appBarBottom}>
