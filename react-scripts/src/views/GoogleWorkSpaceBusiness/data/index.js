@@ -155,21 +155,33 @@ export const mobileFeatures = {
   items: [
     {
       icon: 'fas fa-sign-in-alt',
-      title: 'Sign Up',
+      title: 'Google Gmail',
       subtitle:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Secure, spam-free business email inbox, and so much more. The pioneer of collaborative email solutions and the most popular email inbox globally.',
     },
     {
       icon: 'fas fa-calendar-week',
-      title: 'Create Events',
+      title: 'Google Meet',
       subtitle:
-        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'Secure, encrypted video meetings with just one click to set up and join. No worrying about whether clients have the right accounts or plug-ins.',
     },
     {
       icon: 'fas fa-share-square',
-      title: 'Share memories',
+      title: 'Google Chat',
       subtitle:
-        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Simplify 1:1 and group conversations. Securely connect with anyone and take group work to the next level with shared chat, files and tasks.',
+    },
+    {
+      icon: 'fas fa-share-square',
+      title: 'Google Calendar',
+      subtitle:
+        'Shareable calendars that integrate seamlessly with Gmail and Google Meet. Easily find suitable time for everyone, join video meetings from calendar.',
+    },
+    {
+      icon: 'fas fa-share-square',
+      title: 'Google Currents',
+      subtitle:
+        'Share relevant content with your team through social media type posts and comments that stay accessible over time so you can refer back to them.',
     },
   ],
   people: [
