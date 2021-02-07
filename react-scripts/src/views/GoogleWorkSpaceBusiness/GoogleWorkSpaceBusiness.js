@@ -101,12 +101,10 @@ const GoogleWorkSpaceBusiness = () => {
           <Divider />
         </Section>
         <Integrations data={integrations} />
-
-
-        <Section>
-          <Divider />
-        </Section>
-        <Team data={team} />
+        {/*<Section>*/}
+          {/*<Divider />*/}
+        {/*</Section>*/}
+        {/*<Team data={team} />*/}
         </>
       </Section>
       <SectionAlternate>

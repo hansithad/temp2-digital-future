@@ -15,7 +15,11 @@ import {
 } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { SectionHeader, IconAlternate } from 'components/molecules';
-import YourLogo from './mailicon.svg'
+import mailIcon from './icons/mail.svg'
+import meetIcon from './icons/meet.svg'
+import calendarIcon from './icons/calendar.svg'
+import chatIcon from './icons/chat.svg'
+import currentsIcon from './icons/currents.svg'
 
 
 const useStyles = makeStyles(theme => ({
@@ -46,6 +50,10 @@ const useStyles = makeStyles(theme => ({
 const MobileFeatures = props => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
+
+  const logoObject = {
+    'mail':mailIcon,'chat':chatIcon,'calendar':calendarIcon, 'currents':currentsIcon, 'meet':meetIcon
+  };
 
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -88,16 +96,15 @@ const MobileFeatures = props => {
             </Grid>
             <Grid item xs={12} md={6} data-aos="fade-up">
               <SectionHeader
-                label="get connected"
+                label="stay connected"
                 title={
                   <span>
                     <Typography color="secondary" variant="inherit" component="span">
-                      Share your memories
+                      Make decisions faster
                     </Typography>{' '}
-                    with your travel buddies
                   </span>
                 }
-                subtitle="Don't listen to what they say go and see. Travelling with our app is easy. Join the biggest community of travellers."
+                subtitle="With email as a foundation, you can also chat, make voice or video calls, schedule meetings in shared calendars. All that and much more available one click away, to help you communicate instantly, as if you were face to face."
                 align="left"
                 disableGutter
               />
@@ -111,7 +118,7 @@ const MobileFeatures = props => {
                         {/*color={colors.deepOrange}*/}
                       {/*/>*/}
                       <Icon>
-                        <img src={YourLogo} height={50} width={50}/>
+                        <img src={logoObject[item.logoKey]} height={50} width={50}/>
                       </Icon>
                     </ListItemAvatar>
                     <ListItemText

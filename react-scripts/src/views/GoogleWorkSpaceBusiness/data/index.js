@@ -156,29 +156,34 @@ export const mobileFeatures = {
     {
       icon: 'fas fa-sign-in-alt',
       title: 'Google Gmail',
+      logoKey:'mail',
       subtitle:
         'Secure, spam-free business email inbox, and so much more. The pioneer of collaborative email solutions and the most popular email inbox globally.',
     },
     {
       icon: 'fas fa-calendar-week',
       title: 'Google Meet',
+      logoKey:'meet',
       subtitle:
         'Secure, encrypted video meetings with just one click to set up and join. No worrying about whether clients have the right accounts or plug-ins.',
     },
     {
       icon: 'fas fa-share-square',
+      logoKey:'chat',
       title: 'Google Chat',
       subtitle:
         'Simplify 1:1 and group conversations. Securely connect with anyone and take group work to the next level with shared chat, files and tasks.',
     },
     {
       icon: 'fas fa-share-square',
+      logoKey:'calendar',
       title: 'Google Calendar',
       subtitle:
         'Shareable calendars that integrate seamlessly with Gmail and Google Meet. Easily find suitable time for everyone, join video meetings from calendar.',
     },
     {
       icon: 'fas fa-share-square',
+      logoKey:'currents',
       title: 'Google Currents',
       subtitle:
         'Share relevant content with your team through social media type posts and comments that stay accessible over time so you can refer back to them.',
