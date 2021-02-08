@@ -65,7 +65,12 @@ const MobileFeatures = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Why Google Workspace?"
+        title={
+          <span>
+            Everything you need to get anything done{' '}
+            <Typography color="secondary" variant="inherit" component="span">now in one place</Typography>
+          </span>
+        }
         subtitle={
           <span className={classes.paddedSubHead}>
             Forrester has led a research on a model organization and calculated the impact implementing Google Workspace:171hrs more per user per year spent on actual work 20% less on-demand IT tech support time needed.the risk of data breach decreased 95%
