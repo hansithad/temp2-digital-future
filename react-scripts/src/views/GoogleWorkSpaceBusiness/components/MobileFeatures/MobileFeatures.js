@@ -20,6 +20,9 @@ import meetIcon from './icons/meet.svg'
 import calendarIcon from './icons/calendar.svg'
 import chatIcon from './icons/chat.svg'
 import currentsIcon from './icons/currents.svg'
+import makeDecisionLogo from './make_decisions_faster.png'
+import collaborateLogo from './collaborate real time.png'
+import onlineStorage from './online_storage.png'
 
 
 const useStyles = makeStyles(theme => ({
@@ -34,6 +37,23 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       maxWidth: 400,
     },
+    height: 700,
+    width:381
+  },
+  collaborateLogoImage:{
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 400,
+      height:290
+    },
+    height: 435,
+    width:600
+  },
+  onlineStorageImage:{
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 400,
+    },
+    height: 318,
+    width:600
   },
   avatar: {
     width: 60,
@@ -93,7 +113,7 @@ const MobileFeatures = props => {
               data-aos="fade-up"
             >
               <Image
-                src="https://assets.maccarianagency.com/the-front/illustrations/businesswoman.svg"
+                src={makeDecisionLogo}
                 alt="..."
                 className={classes.coverImage}
                 lazy={false}
@@ -185,11 +205,66 @@ const MobileFeatures = props => {
               data-aos="fade-up"
             >
               <Image
-                src="https://assets.maccarianagency.com/the-front/illustrations/connected-world.svg"
+                src={collaborateLogo}
                 alt="..."
-                className={classes.coverImage}
+                className={classes.collaborateLogoImage}
                 lazy={false}
               />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container spacing={isMd ? 4 : 2}>
+            <Grid
+              item
+              container
+              justify="center"
+              alignItems="center"
+              xs={12}
+              md={6}
+              data-aos="fade-up"
+            >
+              <Image
+                src={onlineStorage}
+                alt="..."
+                className={classes.onlineStorageImage}
+                lazy={false}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} data-aos="fade-up">
+              <SectionHeader
+                label="stay connected"
+                title={
+                  <span>
+                    <Typography color="secondary" variant="inherit" component="span">
+                      Make decisions faster
+                    </Typography>{' '}
+                  </span>
+                }
+                subtitle="With email as a foundation, you can also chat, make voice or video calls, schedule meetings in shared calendars. All that and much more available one click away, to help you communicate instantly, as if you were face to face."
+                align="left"
+                disableGutter
+              />
+              <List disablePadding>
+                {items.map((item, index) => (
+                  <ListItem key={index} disableGutters data-aos="fade-up">
+                    <ListItemAvatar className={classes.listItemAvatar}>
+                      {/*<IconAlternate*/}
+                      {/*size="small"*/}
+                      {/*fontIconClass={item.icon}*/}
+                      {/*color={colors.deepOrange}*/}
+                      {/*/>*/}
+                      <Icon>
+                        <img src={logoObject[item.logoKey]} height={50} width={50}/>
+                      </Icon>
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={item.title}
+                      secondary={item.subtitle}
+                    />
+                  </ListItem>
+                ))}
+              </List>
             </Grid>
           </Grid>
         </Grid>
