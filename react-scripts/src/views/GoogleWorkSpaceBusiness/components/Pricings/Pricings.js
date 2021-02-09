@@ -4,7 +4,7 @@ import {makeStyles, useTheme} from '@material-ui/core/styles';
 import { useMediaQuery, Grid, Typography, Button } from '@material-ui/core';
 import { LearnMoreLink, Icon } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
-import { CardPricingStandard } from 'components/organisms';
+import { CardPricingStandard,CardPricingCustom } from 'components/organisms';
 
 const Pricings = props => {
   const { data, className, ...rest } = props;
@@ -38,7 +38,7 @@ const Pricings = props => {
       <Grid container spacing={isMd ? 4 : 2}>
         {data.map((item, index) => (
           <Grid item xs={12} md={4} data-aos="fade-up" key={index}>
-            <CardPricingStandard
+            <CardPricingCustom
               variant="outlined"
               withShadow={item.isHighlighted ? true : false}
               title={item.title}
@@ -68,7 +68,16 @@ const Pricings = props => {
                   </Typography>
                 </div>
               }
+              priceSubHeader={
+                <Typography
+                  variant="subtitle"
+                  className="card-pricing-standard__feature-title"
+                >
+                  {item.priceSubHeader}
+                </Typography>
+              }
               features={item.features}
+              priceSubHeaderProps={{style:{fontSize:'0.75rem'}}}
               featureTitleProps={{style:{fontSize:'0.75rem'}}}
               featureCheckComponent={
                 <Icon
