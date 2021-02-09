@@ -189,6 +189,102 @@ export const mobileFeatures = {
         'Share relevant content with your team through social media type posts and comments that stay accessible over time so you can refer back to them.',
     },
   ],
+  officeItems: [
+    {
+      icon: 'fas fa-sign-in-alt',
+      title: 'Google Docs',
+      logoKey:'doc',
+      subtitle:
+        'Edit text documents right in your browser. Import and save in formats like: Microsoft® Word doc; docx, pdf, odt, rtf, txt.',
+    },
+    {
+      icon: 'fas fa-calendar-week',
+      title: 'Google Slides',
+      logoKey:'slide',
+      subtitle:
+        'Work on a single presentation real-time, simultaneusly with your team. Powerpoint formats are fully supported',
+    },
+    {
+      icon: 'fas fa-share-square',
+      logoKey:'sheet',
+      title: 'Google Sheet',
+      subtitle:
+        'Latest Sheets are as smooth and productive as Excel, even with larger files. On top you get uncomparable real-time collaboration capabilities.',
+    },
+    {
+      icon: 'fas fa-share-square',
+      logoKey:'keep',
+      title: 'Google Keep',
+      subtitle:
+        'Capture to-dos effortlessly. Collaborate on notes with teammates and set reminders to stay on track of projects.',
+    }
+
+  ],
+  storeItems: [
+    {
+      icon: 'fas fa-sign-in-alt',
+      title: 'Google Drive',
+      logoKey:'drive',
+      subtitle:
+        'Store any and every file. Access files anytime, anywhere from your desktop and mobile devices. Control how files are shared.',
+    },
+    {
+      icon: 'fas fa-calendar-week',
+      title: 'Cloud Search',
+      logoKey:'cloudSearch',
+      subtitle:
+        'Use the power of Google to search across your private and company content. Find emails, files, calendar events, notes and more with just one click.',
+    },
+
+  ],
+  itItems: [
+    {
+      icon: 'fas fa-sign-in-alt',
+      title: 'Google Forms',
+      logoKey:'form',
+      subtitle:
+        'Create surveys to gain valuable insights or information from employees or customers. Add images, videos, and custom logic.',
+    },
+    {
+      icon: 'fas fa-sign-in-alt',
+      title: 'Google Sites',
+      logoKey:'site',
+      subtitle:
+        'Now anyone can create engaging, high-quality websites without coding. It can be internal, for your team, project or external for new product or event.',
+    },
+    {
+      icon: 'fas fa-calendar-week',
+      title: 'Appsheet',
+      logoKey:'appsheet',
+      subtitle:
+        'Design and launch an interactive full end-to-end mobile and desktop applications in no time and no coding. Use spreadsheet as database.',
+    },
+
+  ],
+  adminItems: [
+    {
+      icon: 'fas fa-sign-in-alt',
+      title: 'Google Admin',
+      logoKey:'admin',
+      subtitle:
+        'Add users, manage devices, and configure security and settings so your data stays safe. All that from one place.',
+    },
+    {
+      icon: 'fas fa-sign-in-alt',
+      title: 'Google Endpoint Management',
+      logoKey:'endpoint',
+      subtitle:
+        'Device access management for Android, iOS, Windows, Chrome OS, MacOS, and Linux devices.',
+    },
+    {
+      icon: 'fas fa-calendar-week',
+      title: 'Google Vault',
+      logoKey:'vault',
+      subtitle:
+        'Retain, search, and export your organization’s data from selected apps for legal purposes.',
+    }
+
+  ],
   people: [
     {
       authorPhoto: {

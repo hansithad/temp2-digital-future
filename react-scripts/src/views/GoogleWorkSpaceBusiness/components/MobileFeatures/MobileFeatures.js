@@ -20,9 +20,31 @@ import meetIcon from './icons/meet.svg'
 import calendarIcon from './icons/calendar.svg'
 import chatIcon from './icons/chat.svg'
 import currentsIcon from './icons/currents.svg'
+
+
+import slideIcon from './icons/Slides_Product_Icon.svg'
+import docsIcon from './icons/Docs_Product_Icon.svg'
+import sheetIcon from './icons/Sheets_Product_Icon.svg'
+import keepIcon from './icons/keep.png'
+
+import driveIcon from './icons/Drive_Product_Icon.svg'
+import cloudSearchIcon from './icons/hh_google_cloud_search_64dp.png'
+
+import appsheetIcon from './icons/appsheets.svg'
+import formsIcon from './icons/Forms_Product_Icon.svg'
+import sitesIcon from './icons/Sites_Product_Icon.svg'
+
+import adminIcon from './icons/security/Admin.svg'
+import endpointIcon from './icons/security/endpoint.png'
+import vaultIcon from './icons/security/vault.png'
+import workInsightIcon from './icons/security/work_insights.png'
+
+
 import makeDecisionLogo from './make_decisions_faster.png'
 import collaborateLogo from './collaborate real time.png'
 import onlineStorage from './online_storage.png'
+import lessItLogo from './Less_IT_more business.png'
+import securityLogo from './administration.png'
 
 
 const useStyles = makeStyles(theme => ({
@@ -72,7 +94,11 @@ const MobileFeatures = props => {
   const classes = useStyles();
 
   const logoObject = {
-    'mail':mailIcon,'chat':chatIcon,'calendar':calendarIcon, 'currents':currentsIcon, 'meet':meetIcon
+    'mail':mailIcon,'chat':chatIcon,'calendar':calendarIcon, 'currents':currentsIcon, 'meet':meetIcon,
+    'slide': slideIcon, 'doc':docsIcon, 'sheet':sheetIcon,'keep':keepIcon,
+    'drive':driveIcon, 'cloudSearch':cloudSearchIcon,
+    'form':formsIcon, 'site':sitesIcon, 'appsheet':appsheetIcon,
+    'admin':adminIcon, 'endpoint':endpointIcon, 'vault':vaultIcon, 'workInsight':workInsightIcon
   };
 
   const theme = useTheme();
@@ -80,7 +106,7 @@ const MobileFeatures = props => {
     defaultMatches: true,
   });
 
-  const { items, people } = data;
+  const { items, officeItems, storeItems, itItems, adminItems } = data;
 
   return (
     <div className={className} {...rest}>
@@ -164,28 +190,25 @@ const MobileFeatures = props => {
           >
             <Grid item xs={12} md={6} data-aos="fade-up">
               <SectionHeader
-                label="get connected"
+                label="stay productive"
                 title={
                   <span>
                     <Typography color="secondary" variant="inherit" component="span">
-                      Share your memories
+                      Collaborate in real-time
                     </Typography>{' '}
-                    with your travel buddies
                   </span>
                 }
-                subtitle="Don't listen to what they say go and see. Travelling with our app is easy. Join the biggest community of travellers."
+                subtitle="Multiple people can work at the same time on a single document (you can control who gets permission to edit, view or just comment), seeing the edits as others type simultaneously. Every change is saved automatically with ability to track and undo all the revisions."
                 align="left"
                 disableGutter
               />
               <List disablePadding>
-                {items.map((item, index) => (
+                {officeItems.map((item, index) => (
                   <ListItem key={index} disableGutters data-aos="fade-up">
                     <ListItemAvatar className={classes.listItemAvatar}>
-                      <IconAlternate
-                        size="small"
-                        fontIconClass={item.icon}
-                        color={colors.deepOrange}
-                      />
+                      <Icon>
+                        <img src={logoObject[item.logoKey]} height={50} width={50}/>
+                      </Icon>
                     </ListItemAvatar>
                     <ListItemText
                       primary={item.title}
@@ -233,27 +256,127 @@ const MobileFeatures = props => {
             </Grid>
             <Grid item xs={12} md={6} data-aos="fade-up">
               <SectionHeader
-                label="stay connected"
+                label="stay organized"
                 title={
                   <span>
                     <Typography color="secondary" variant="inherit" component="span">
-                      Make decisions faster
+                      Organize and access files faster
                     </Typography>{' '}
                   </span>
                 }
-                subtitle="With email as a foundation, you can also chat, make voice or video calls, schedule meetings in shared calendars. All that and much more available one click away, to help you communicate instantly, as if you were face to face."
+                subtitle="Google Workspace provides flexible cloud storage options. Keep files private until you decide to share them with one click. Use shared drives to store your team’s or company's data.
+Use the power of Google to search your private or the shared files."
                 align="left"
                 disableGutter
               />
               <List disablePadding>
-                {items.map((item, index) => (
+                {storeItems.map((item, index) => (
                   <ListItem key={index} disableGutters data-aos="fade-up">
                     <ListItemAvatar className={classes.listItemAvatar}>
-                      {/*<IconAlternate*/}
-                      {/*size="small"*/}
-                      {/*fontIconClass={item.icon}*/}
-                      {/*color={colors.deepOrange}*/}
-                      {/*/>*/}
+                      <Icon>
+                        <img src={logoObject[item.logoKey]} height={50} width={50}/>
+                      </Icon>
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={item.title}
+                      secondary={item.subtitle}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid
+            container
+            spacing={isMd ? 4 : 2}
+            direction={isMd ? 'row' : 'column-reverse'}
+          >
+            <Grid item xs={12} md={6} data-aos="fade-up">
+              <SectionHeader
+                label="stay agile"
+                title={
+                  <span>
+                    <Typography color="secondary" variant="inherit" component="span">
+                      Less coding, more business
+                    </Typography>{' '}
+                  </span>
+                }
+                subtitle="Create online applications for internal use or wider public. Easily build survey forms, websites, interactive applications without any coding required: just click, drag or drop. The design will rearrange automatically with a grid layout. Sharing permissions, access and ownership can be easily managed."
+                align="left"
+                disableGutter
+              />
+              <List disablePadding>
+                {itItems.map((item, index) => (
+                  <ListItem key={index} disableGutters data-aos="fade-up">
+                    <ListItemAvatar className={classes.listItemAvatar}>
+                      <Icon>
+                        <img src={logoObject[item.logoKey]} height={50} width={50}/>
+                      </Icon>
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={item.title}
+                      secondary={item.subtitle}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+            <Grid
+              item
+              container
+              justify="center"
+              alignItems="center"
+              xs={12}
+              md={6}
+              data-aos="fade-up"
+            >
+              <Image
+                src={lessItLogo}
+                alt="..."
+                className={classes.collaborateLogoImage}
+                lazy={false}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container spacing={isMd ? 4 : 2}>
+            <Grid
+              item
+              container
+              justify="center"
+              alignItems="center"
+              xs={12}
+              md={6}
+              data-aos="fade-up"
+            >
+              <Image
+                src={securityLogo}
+                alt="..."
+                className={classes.onlineStorageImage}
+                lazy={false}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} data-aos="fade-up">
+              <SectionHeader
+                label="stay secure"
+                title={
+                  <span>
+                    <Typography color="secondary" variant="inherit" component="span">
+                      Embrace Google level of security
+                    </Typography>{' '}
+                  </span>
+                }
+                subtitle="Protect your organization using integrated Cloud Identity to manage users and set up security options like 2-step verification. Use device management to distribute apps on mobile devices and limit data access. Track your organizations security and collaboration patterns with reports."
+                align="left"
+                disableGutter
+              />
+              <List disablePadding>
+                {adminItems.map((item, index) => (
+                  <ListItem key={index} disableGutters data-aos="fade-up">
+                    <ListItemAvatar className={classes.listItemAvatar}>
                       <Icon>
                         <img src={logoObject[item.logoKey]} height={50} width={50}/>
                       </Icon>
