@@ -264,6 +264,13 @@ export const mobileFeatures = {
   adminItems: [
     {
       icon: 'fas fa-sign-in-alt',
+      title: 'Google Work Insights',
+      logoKey:'workInsight',
+      subtitle:
+        'Understand how Workspace impacts your organization. Analyze insights on adoption, work and collaboration patterns across apps and devices.',
+    },
+    {
+      icon: 'fas fa-sign-in-alt',
       title: 'Google Admin',
       logoKey:'admin',
       subtitle:
