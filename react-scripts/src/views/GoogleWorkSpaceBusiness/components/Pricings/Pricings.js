@@ -77,7 +77,7 @@ const Pricings = props => {
                 </Typography>
               }
               features={item.features}
-              priceSubHeaderProps={{style:{fontSize:'0.75rem'}}}
+              priceSubHeaderProps={{style:{fontSize:'0.8rem'}}}
               featureTitleProps={{style:{fontSize:'0.75rem'}}}
               featureCheckComponent={
                 <Icon
