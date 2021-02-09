@@ -69,7 +69,7 @@ const Pricings = props => {
                 </div>
               }
               features={item.features}
-              featureTitleProps={{variant:"subtitle1"}}
+              featureTitleProps={{style:{fontSize:'0.75rem'}}}
               featureCheckComponent={
                 <Icon
                   fontIconClass="far fa-check-circle"
