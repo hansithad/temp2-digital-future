@@ -73,10 +73,29 @@ const useStyles = makeStyles(theme => ({
   onlineStorageImage:{
     [theme.breakpoints.down('sm')]: {
       maxWidth: 400,
+      height: 212
     },
     height: 318,
     width:600
   },
+  lessItImage:{
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 350,
+      height: 226
+    },
+    height: 388 ,
+    width:600
+  },
+  adminImage:{
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 400,
+      height: 250,
+      padding :10
+    },
+    height: 318,
+    width:600
+  },
+
   avatar: {
     width: 60,
     height: 60,
@@ -335,7 +354,7 @@ Use the power of Google to search your private or the shared files."
               <Image
                 src={lessItLogo}
                 alt="..."
-                className={classes.collaborateLogoImage}
+                className={classes.lessItImage}
                 lazy={false}
               />
             </Grid>
@@ -355,7 +374,7 @@ Use the power of Google to search your private or the shared files."
               <Image
                 src={securityLogo}
                 alt="..."
-                className={classes.onlineStorageImage}
+                className={classes.adminImage}
                 lazy={false}
               />
             </Grid>
