@@ -358,3 +358,54 @@ export const team = [
     authorName: 'Valeria Kogan',
   },
 ];
+
+export const pricings = [
+  {
+    title: 'Standard License',
+    subtitle: 'A pay-once license, just for you',
+    price: '$5',
+    oldPrice: '$6',
+    priceSuffix: ' / MONTH/ USER',
+    features: [
+      'Rich, responsive landing pages and long text testing',
+      '100+ styled components',
+      'Flexible, simple license',
+      'Speedy build tooling',
+      '6 months free support included',
+    ],
+    disclaimer: 'Fully featured 30-day free trial',
+    isHighlighted: false,
+  },
+  {
+    title: 'Extended License',
+    subtitle: 'A pay-once license, just for you',
+    price: '$79',
+    oldPrice: '$80',
+    priceSuffix: ' / MONTH/ USER',
+    features: [
+      'Rich, responsive landing pages and long text testing',
+      '100+ styled components',
+      'Flexible, simple license',
+      'Speedy build tooling',
+      '6 months free support included and long text testing',
+    ],
+    disclaimer: 'Fully featured 30-day free trial',
+    isHighlighted: true,
+  },
+  {
+    title: 'Standard License',
+    subtitle: 'A pay-once license, just for you',
+    price: '$99',
+    oldPrice: '$100',
+    priceSuffix: ' / MONTH/ USER',
+    features: [
+      'Rich, responsive landing pages',
+      '100+ styled components',
+      'Flexible, simple license',
+      'Speedy build tooling',
+      '6 months free support included',
+    ],
+    disclaimer: 'Fully featured 30-day free trial',
+    isHighlighted: false,
+  },
+];

@@ -93,7 +93,6 @@ const CardPricingStandard = props => {
                   )}
                   <Typography
                     variant="h6"
-                    noWrap
                     className="card-pricing-standard__feature-title"
                     {...featureTitleProps}
                   >

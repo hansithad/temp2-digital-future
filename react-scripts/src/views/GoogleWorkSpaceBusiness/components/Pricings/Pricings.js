@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import { useMediaQuery, Grid, Typography, Button } from '@material-ui/core';
 import { LearnMoreLink, Icon } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
@@ -13,6 +13,17 @@ const Pricings = props => {
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
+
+  const useStyles = makeStyles(theme => ({
+    fontWeight900: {
+      fontWeight: 900,
+    },
+    oldPrice: {
+      fontWeight: 900,
+      textDecoration: 'line-through'
+    },
+  }));
+  const classes = useStyles();
 
   return (
     <div className={className} {...rest}>
@@ -36,8 +47,19 @@ const Pricings = props => {
               priceComponent={
                 <div>
                   <Typography
-                    variant="h3"
+                    variant="h4"
                     component="span"
+                    className={classes.oldPrice}
+
+                  >
+                    {item.oldPrice}
+                  </Typography>
+                  &nbsp;&nbsp;
+                  <Typography
+                    variant="h4"
+                    component="span"
+                    color="primary"
+                    className={classes.fontWeight900}
                   >
                     {item.price}
                   </Typography>
@@ -47,6 +69,7 @@ const Pricings = props => {
                 </div>
               }
               features={item.features}
+              featureTitleProps={{variant:"subtitle1"}}
               featureCheckComponent={
                 <Icon
                   fontIconClass="far fa-check-circle"
@@ -59,8 +82,10 @@ const Pricings = props => {
                   variant={item.isHighlighted ? 'contained' : 'outlined'}
                   fullWidth
                   size="large"
+                  style={{textTransform: 'none'}}
+
                 >
-                  Subscribe now
+                  Free Trial
                 </Button>
               }
               disclaimer={item.disclaimer}

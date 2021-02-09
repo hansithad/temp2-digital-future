@@ -28,9 +28,9 @@ import {
   integrations,
   customizations,
   team,
-  mobileFeatures
+  mobileFeatures,
+  pricings
 } from './data';
-import {pricings} from "../MobileApp/data";
 
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
