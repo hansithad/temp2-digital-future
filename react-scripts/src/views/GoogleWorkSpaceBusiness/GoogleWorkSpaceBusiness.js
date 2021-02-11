@@ -18,7 +18,8 @@ import {
   Team,
   VideoSection,
   MobileFeatures,
-  Pricings
+  Pricings,
+  CloudFeatures
 } from './components';
 
 import {
@@ -29,8 +30,10 @@ import {
   customizations,
   team,
   mobileFeatures,
-  pricings
+  pricings,
+  cloudFeatures
 } from './data';
+import {features} from "../CloudHosting/data";
 
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
@@ -111,6 +114,12 @@ const GoogleWorkSpaceBusiness = () => {
       </Section>
       <Section style={{paddingTop:0}}>
         <Pricings data={pricings} />
+      </Section>
+      <Section>
+        <Divider />
+      </Section>
+      <Section style={{paddingTop:0}}>
+        <CloudFeatures data={cloudFeatures} />
       </Section>
       <Divider />
       <AppBar position="fixed" className={classes.appBarBottom}>
