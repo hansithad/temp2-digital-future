@@ -425,19 +425,19 @@ export const cloudFeatures = {
         'Having selected the licence type, we will activate email accounts, groups, shared mailboxes and migrate your legacy email and storage data preparing for transition.',
     },
     {
-      icon: 'fas fa-puzzle-piece',
+      icon: 'headset',
       title: '3. User Support',
       subtitle:
         'After succesfull go-live we can offer additional continuous tech and product support for users.',
     },
     {
-      icon: 'fas fa-bullseye',
+      icon: 'cache',
       title: '2. Transition',
       subtitle:
         'Once everything is prepared for go-live we will apply best practices of change management suggested by Google to ensure smooth transition of users (including trainings) and no downtime for your company.',
     },
     {
-      icon: 'fas fa-bullhorn',
+      icon: 'user',
       title: '4. Security Support',
       subtitle:
         'Our Admin Managed Service can take the full burden the Workspace Administration and Security Management from your company.',

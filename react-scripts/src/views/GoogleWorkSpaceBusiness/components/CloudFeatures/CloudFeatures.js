@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
+import CachedIcon from '@material-ui/icons/Cached';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+// import { HeadsetMicIcon} from '@material-ui/icons/HeadsetMicIcon';
+
 import {
   colors,
   useMediaQuery,
@@ -60,6 +65,33 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const renderIcon = function(iconName){
+  switch (iconName) {
+    case 'cache':
+      return (
+        <CachedIcon style={{fontSize:70}}/>
+      )
+    break;
+    case 'headset':
+      return (
+        <HeadsetMicIcon style={{fontSize:70}}/>
+      )
+      break;
+    case 'user':
+      return (
+        <VerifiedUserIcon style={{fontSize:70}}/>
+      )
+      break;
+    default:
+      return (
+        <></>
+      )
+    break;
+
+  }
+
+}
+
 const CloudFeatures = props => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
@@ -85,7 +117,8 @@ const CloudFeatures = props => {
                         <DescriptionListIcon
                           icon={
                             <div className={classes.iconCover}>
-                              <NoSsr><i className={item.icon} /></NoSsr>
+                              {renderIcon(item.icon)}
+                              {/*<NoSsr><i className={item.icon} /></NoSsr>*/}
                             </div>
                           }
                           title={item.title}
@@ -106,7 +139,8 @@ const CloudFeatures = props => {
                           <DescriptionListIcon
                             icon={
                               <div className={classes.iconCover}>
-                                <NoSsr><i className={item.icon} /></NoSsr>
+                                {renderIcon(item.icon)}
+                                {/*<NoSsr><i className={item.icon} /></NoSsr>*/}
                               </div>
                             }
                             title={item.title}
