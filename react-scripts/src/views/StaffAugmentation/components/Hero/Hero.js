@@ -6,11 +6,11 @@ import { Button } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import { HeroShaped } from 'components/organisms';
+import heroImage from './staff.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background:
-      'url(https://assets.maccarianagency.com/the-front/illustrations/patterns-bg.svg) no-repeat left bottom',
+
     backgroundSize: 'contain',
     backgroundColor: theme.palette.alternate.main,
   },
@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     objectFit: 'cover',
+    objectPosition: '6% 0'
   },
 }));
 
@@ -50,8 +51,8 @@ const Hero = props => {
         rightSide={
           <div className={classes.cover}>
             <Image
-              src="https://assets.maccarianagency.com/the-front/photos/logistics/cover.png"
-              srcSet="https://assets.maccarianagency.com/the-front/photos/logistics/cover@2x.png 2x"
+              src={heroImage}
+              // srcSet="https://assets.maccarianagency.com/the-front/photos/logistics/cover@2x.png 2x"
               className={classes.image}
               lazyProps={{
                 width: '100%',
