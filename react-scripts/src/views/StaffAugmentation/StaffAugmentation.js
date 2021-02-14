@@ -58,23 +58,24 @@ const StaffAugmentation = () => {
   return (
     <div>
       <Hero />
-      <Section className={classes.sectionTrucking}>
-        <Trucking data={trucking} />
-      </Section>
-      <SectionAlternate className={classes.aboutSection}>
-        <About />
-      </SectionAlternate>
       <div className={classes.featuresSection}>
         <Section>
           <Features data={features} />
         </Section>
       </div>
-      <SectionAlternate>
-        <News data={news} />
+      <SectionAlternate className={classes.aboutSection}>
+        <About />
       </SectionAlternate>
       <Section>
         <Team data={team} />
       </Section>
+      <Section className={classes.sectionTrucking}>
+        <Trucking data={trucking} />
+      </Section>
+      <SectionAlternate>
+        <News data={news} />
+      </SectionAlternate>
+
       <Video />
       <SectionAlternate className={classes.integrationsSection}>
         <Integrations data={integrations} />
