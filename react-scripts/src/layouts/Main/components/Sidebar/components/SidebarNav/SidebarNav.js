@@ -170,9 +170,21 @@ const SidebarNav = props => {
       <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />
       </ListItem>
-      <ListItem className={classes.listItem}>
-        <Typography variant="h6" color="textPrimary" gutterBottom>
-          Staff Augmentation
+      {/*<ListItem className={classes.listItem}>*/}
+        {/*<Typography variant="h6" color="textPrimary" gutterBottom>*/}
+          {/*Staff Augmentation*/}
+        {/*</Typography>*/}
+      {/*</ListItem>*/}
+      <ListItem disableGutters className={classes.menuGroupItem}>
+        <Typography
+          variant="body2"
+          component={'a'}
+          href='/job-listing'
+          className={clsx(classes.navLink, 'submenu-item')}
+          color="textPrimary"
+          onClick={() => onClose()}
+        >
+          Staff Augmentation1
         </Typography>
       </ListItem>
       <ListItem className={classes.listItem}>

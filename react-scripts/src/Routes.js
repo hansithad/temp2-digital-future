@@ -21,6 +21,7 @@ import {
   Enterprise as EnterpriseView,
   Service as ServiceView,
   GoogleWorkSpaceBusiness as GoogleWorkSpaceBusinessView,
+  StaffAugmentation as StaffAugmentation,
   WebBasic as WebBasicView,
   DesktopApp as DesktopAppView,
   Expo as ExpoView,
@@ -179,6 +180,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={GoogleWorkSpaceBusinessView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/staff-augmentation"
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={StaffAugmentation}
             layout={MainLayout}
           />
         )}

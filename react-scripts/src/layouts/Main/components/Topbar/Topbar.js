@@ -352,7 +352,6 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
             <div key={page.id}>
                 <ListItem
                     aria-describedby={page.id}
-                    onClick={e => handleClick(e, page.id)}
                     className={clsx(
                         classes.listItem,
                         openedPopoverId === page.id ? classes.listItemActive : '',
@@ -361,29 +360,13 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
                     <Typography
                         variant="body1"
                         color="textPrimary"
+                        component={'a'}
+                        href={page.id}
                         className={clsx(classes.listItemText, 'menu-item')}
                     >
                         {page.title}
                     </Typography>
                 </ListItem>
-                <Popover
-                    elevation={1}
-                    id={page.id}
-                    open={openedPopoverId === page.id}
-                    anchorEl={anchorEl}
-                    onClose={handleClose}
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'center',
-                    }}
-                    transformOrigin={{
-                        vertical: 'top',
-                        horizontal: 'center',
-                    }}
-                    classes={{ paper: classes.popover }}
-                >
-                    <div>{renderPages(page.id)}</div>
-                </Popover>
             </div>
         ))}
           <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
