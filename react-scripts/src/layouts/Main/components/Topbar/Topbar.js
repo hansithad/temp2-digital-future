@@ -16,6 +16,7 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Image, DarkModeToggler } from 'components/atoms';
+import dfLogo  from './df_logo.png'
 
 const useStyles = makeStyles(theme => ({
   flexGrow: {
@@ -95,6 +96,11 @@ const useStyles = makeStyles(theme => ({
   logoImage: {
     width: '100%',
     height: '100%',
+  },
+  darkLogoImage: {
+    width: '100%',
+    height: '95%',
+    filter: 'invert(100%)',
   },
   menu: {
     display: 'flex',
@@ -290,11 +296,12 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   return (
     <Toolbar disableGutters className={classes.toolbar} {...rest}>
       <div className={classes.logoContainer}>
-        <a href="/" title="thefront">
+        <a href="/" title="Digital Future">
           <Image
-            className={classes.logoImage}
-            src={themeMode === 'light' ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg' : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'}
-            alt="thefront"
+            className={themeMode==='light'? classes.logoImage: classes.darkLogoImage}
+            src={dfLogo}
+            // src={themeMode === 'light' ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg' : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'}
+            alt="Digital Future"
             lazy={false}
           />
         </a>
