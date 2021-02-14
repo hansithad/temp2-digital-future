@@ -114,7 +114,7 @@ const GoogleWorkSpaceBusiness = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <Pricings data={pricings} />
+        <Pricings data={pricings} handleBottombarOpen={handleBottombarOpen} />
       </Section>
       <Section style={{paddingTop:0}}>
         <Divider />
