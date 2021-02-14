@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const About = props => {
-  const { data, className, ...rest } = props;
+  const { data, className, handleBottombarOpen,...rest } = props;
   const classes = useStyles();
 
   const theme = useTheme();
@@ -46,6 +46,7 @@ const About = props => {
                     variant="contained"
                     color="primary"
                     size={isMd ? 'large' : 'medium'}
+                    onClick={handleBottombarOpen}
                   >
                     Start a Free Trial
                   </Button>,

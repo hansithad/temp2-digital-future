@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Features = props => {
-  const { data, className, ...rest } = props;
+  const { data, className, handleBottombarOpen,...rest } = props;
   const classes = useStyles();
 
   const theme = useTheme();
@@ -37,6 +37,7 @@ const Features = props => {
             variant="outlined"
             size={isMd ? 'large' : 'medium'}
             color="secondary"
+            onClick={handleBottombarOpen}
           >
             ASK ABOUT OUR SERVICES
           </Button>,

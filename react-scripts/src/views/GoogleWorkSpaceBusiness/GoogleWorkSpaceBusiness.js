@@ -95,11 +95,11 @@ const GoogleWorkSpaceBusiness = () => {
     <div className={classes.root}>
       <Section className={classes.pagePaddingTop}>
         <>
-        <About data={partners} />
+        <About data={partners} handleBottombarOpen={handleBottombarOpen} />
         <Section>
           <Divider />
         </Section>
-        <Features data={customizations} />
+        <Features data={customizations} handleBottombarOpen={handleBottombarOpen} />
 
         {/*<Team data={team} />*/}
         </>
@@ -120,7 +120,7 @@ const GoogleWorkSpaceBusiness = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <CloudFeatures data={cloudFeatures} />
+        <CloudFeatures data={cloudFeatures} handleBottombarOpen={handleBottombarOpen} />
       </Section>
       <Divider />
       <AppBar position="fixed" className={classes.appBarBottom}>

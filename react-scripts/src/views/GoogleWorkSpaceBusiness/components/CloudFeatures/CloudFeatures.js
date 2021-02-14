@@ -93,7 +93,7 @@ const renderIcon = function(iconName){
 }
 
 const CloudFeatures = props => {
-  const { data, className, ...rest } = props;
+  const { data, className,handleBottombarOpen, ...rest } = props;
   const classes = useStyles();
 
   const theme = useTheme();
@@ -192,6 +192,7 @@ const CloudFeatures = props => {
               color="primary"
               className={classes.cta}
               data-aos="fade-up"
+              onClick={handleBottombarOpen}
             >
               ASK ABOUT SERVICES
             </Button>
