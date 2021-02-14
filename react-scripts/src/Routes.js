@@ -131,6 +131,17 @@ const Routes = () => {
       />
       <Route
         exact
+        path="/contact"
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={ContactPageView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
         path="/coworking"
         render={matchProps => (
           <WithLayout

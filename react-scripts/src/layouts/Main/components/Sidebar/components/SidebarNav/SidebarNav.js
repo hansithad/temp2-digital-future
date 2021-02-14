@@ -201,8 +201,7 @@ const SidebarNav = props => {
           color="primary"
           fullWidth
           component="a"
-          target="blank"
-          href="https://material-ui.com/store/items/the-front-landing-page/"
+          href="/contact"
         >
           Contact
         </Button>

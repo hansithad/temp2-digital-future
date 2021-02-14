@@ -378,8 +378,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
               variant="contained"
               color="primary"
               component="a"
-              target="blank"
-              href="https://material-ui.com/store/items/the-front-landing-page/"
+              href="/contact"
               className={classes.listItemButton}
             >
               Contact
