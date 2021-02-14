@@ -104,19 +104,19 @@ const GoogleWorkSpaceBusiness = () => {
         {/*<Team data={team} />*/}
         </>
       </Section>
-      <Section >
+      <Section style={{paddingTop:20}}>
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
         <MobileFeatures data={mobileFeatures} />
       </Section>
-      <Section>
+      <Section style={{paddingTop:0}}>
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
         <Pricings data={pricings} />
       </Section>
-      <Section>
+      <Section style={{paddingTop:0}}>
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
