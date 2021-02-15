@@ -1,24 +1,3 @@
-export const trucking = [
-  {
-    icon: 'fas fa-layer-group',
-    title: 'Built for developers',
-    subtitle:
-      'TheFront is built to make your life easier. Variables, build tooling, documentation, and reusable components.',
-  },
-  {
-    icon: 'fab fa-sketch',
-    title: 'Designed to be modern',
-    subtitle:
-      'Designed with the latest design trends in mind. TheFront feels modern, minimal, and beautiful.',
-  },
-  {
-    icon: 'fas fa-code',
-    title: 'Documentation for everything',
-    subtitle:
-      "We've written extensive documentation for components and tools, so you never have to reverse engineer anything.",
-  },
-];
-
 export const features = [
   {
     icon: 'far fa-comment',
@@ -46,26 +25,6 @@ export const team = [
   "Simply select where you'd like to transfer your data ",
 ];
 
-export const integrations = [
-  {
-    logo: 'https://assets.maccarianagency.com/the-front/logos/slack.svg',
-    name: 'Slack',
-    title:
-      "Sync your team's work and activity to share automatically in a channel with a simple plugin.",
-  },
-  {
-    logo: 'https://assets.maccarianagency.com/the-front/logos/mailchimp.svg',
-    name: 'Mailchimp',
-    title:
-      'Communicate important messages to your users through TheFront using Mailchimp as the delivery service.',
-  },
-  {
-    logo: 'https://assets.maccarianagency.com/the-front/logos/dropbox.svg',
-    name: 'Dropbox',
-    title:
-      'Sync any file store to Dropbox for automated sharing with people outside the company.',
-  },
-];
 
 export const reviews = [
   {
@@ -108,35 +67,6 @@ export const jobs = [
   },
 ];
 
-export const news = [
-  {
-    cover: {
-      src: 'https://assets.maccarianagency.com/the-front/photos/logistics/news1.jpg',
-      srcSet: 'https://assets.maccarianagency.com/the-front/photos/logistics/news1@2x.jpg 2x',
-    },
-    tag: 'delivery',
-    title: 'Optimize the schedules of thousands of trains in minutes.',
-    date: '12 June, 2020',
-  },
-  {
-    cover: {
-      src: 'https://assets.maccarianagency.com/the-front/photos/logistics/news2.jpg',
-      srcSet: 'https://assets.maccarianagency.com/the-front/photos/logistics/news2@2x.jpg 2x',
-    },
-    tag: 'Main stream',
-    title: 'Optimize the schedules of thousands of trains in minutes.',
-    date: '12 June, 2020',
-  },
-  {
-    cover: {
-      src: 'https://assets.maccarianagency.com/the-front/photos/logistics/news3.jpg',
-      srcSet: 'https://assets.maccarianagency.com/the-front/photos/logistics/news3@2x.jpg 2x',
-    },
-    tag: 'Trucks',
-    title: 'Optimize the schedules of thousands of trains in minutes.',
-    date: '12 June, 2020',
-  },
-];
 
 export const pricings = [
   {

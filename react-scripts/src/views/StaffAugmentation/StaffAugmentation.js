@@ -6,25 +6,18 @@ import {
   AboutBottom,
   Features,
   Hero,
-  Integrations,
   Jobs,
-  News,
   Pricings,
   Reviews,
   Search,
   Team,
-  Trucking,
-  Video,
 } from './components';
 
 import {
-  trucking,
   features,
   team,
-  integrations,
   reviews,
   jobs,
-  news,
   pricings,
 } from './data';
 
@@ -68,17 +61,6 @@ const StaffAugmentation = () => {
       <Section>
         <Team data={team} />
       </Section>
-      <Section className={classes.sectionTrucking}>
-        <Trucking data={trucking} />
-      </Section>
-      <SectionAlternate>
-        <News data={news} />
-      </SectionAlternate>
-
-      <Video />
-      <SectionAlternate className={classes.integrationsSection}>
-        <Integrations data={integrations} />
-      </SectionAlternate>
       <Section>
         <Pricings data={pricings} />
       </Section>
