@@ -3,12 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Section, SectionAlternate } from 'components/organisms';
 import {
   About,
-  AboutBottom,
   Features,
   Hero,
   Jobs,
   Pricings,
-  Reviews,
   Search,
   Team,
 } from './components';
@@ -16,7 +14,6 @@ import {
 import {
   features,
   team,
-  reviews,
   jobs,
   pricings,
 } from './data';
@@ -35,9 +32,6 @@ const useStyles = makeStyles(theme => ({
   },
   sectionNoPaddingTop: {
     paddingTop: 0,
-  },
-  reviewSection: {
-    background: theme.palette.primary.dark,
   },
   aboutSection: {
     background: '#0c133e',
@@ -70,12 +64,6 @@ const StaffAugmentation = () => {
       <Section>
         <Search />
       </Section>
-      <Section className={classes.sectionNoPaddingTop}>
-        <AboutBottom />
-      </Section>
-      <SectionAlternate className={classes.reviewSection}>
-        <Reviews data={reviews} />
-      </SectionAlternate>
     </div>
   );
 };
