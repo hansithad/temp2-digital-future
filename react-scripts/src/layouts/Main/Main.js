@@ -79,8 +79,8 @@ const Main = ({ children, themeToggler, themeMode }) => {
         }
     },
     staffAugmentation:{
-        title: 'Staff Augmentation',
-        id: 'staff-augmentation',
+        title: 'Talent Augmentation',
+        id: 'talent-augmentation',
         children:{
 
         }

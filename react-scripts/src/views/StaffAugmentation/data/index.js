@@ -22,21 +22,21 @@ export const trucking = [
 export const features = [
   {
     icon: 'far fa-comment',
-    title: `Ensuring clear communication`,
+    title: `360 Digital`,
     subtitle:
-      'We keep you in the loop every step of the way. You can rely on a transparent, comprehensible flow of information.',
+      'We are exceptionally strong in Digital Industries. Whether you want to expand your tech team or market your tech product, we’ll take on our digital experience to strenghten your team with exceptional talent and make your projects even brighter.',
   },
   {
     icon: 'far fa-paper-plane',
-    title: 'Making the most of technology',
+    title: 'Risk Free',
     subtitle:
-      'Time is precious. We guarantee a high degree of efficiency and a premium level of service by using the right tools.',
+      'Building in-house capabilities is costly and risky venture for companies of different core business. Building an effective team is a matter of months. We will provide you with required knowledge with a fraction of time and cost.',
   },
   {
     icon: 'far fa-heart',
-    title: 'Providing excellent customer service',
+    title: 'Stress Free',
     subtitle:
-      'We are passionate about what we do and we take pride in achieving the personalised results that you have in mind.',
+      'Focus only on your internal projects and its final outcomes, let us worry about the talent and expertise supply for the project. We will manage all the administration, onboarding and offboarding process so you can focus on what is important.',
   },
 ];
 

@@ -35,14 +35,9 @@ const Hero = props => {
       <HeroShaped
         leftSide={
           <SectionHeader
-            title="We make transportation efficient."
-            subtitle="Forward thinking businesses use our cloud backup service to ensure data reliability and safety."
+            title="Easily strenghten your team with Digital Experts."
+            subtitle="Forward thinking businesses use our talent augmentation service as an alternative to standard consulting project formula or full time hiring, strenghtening their internal capabilities at a fraction of cost."
             subtitleColor="textPrimary"
-            ctaGroup={[
-              <Button variant="contained" color="primary" size="large">
-                get started
-              </Button>,
-            ]}
             align="left"
             data-aos="fade-up"
             titleVariant="h3"

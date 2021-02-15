@@ -17,8 +17,8 @@ const Features = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Our Features"
-        subtitle="After 3 days all of your offers will arrive and you will have another 7 days to select your new company."
+        title="Quickly strenghten your team's expertise."
+        subtitle="Assign our employee as part time team member of your team"
       />
       <Grid container spacing={isMd ? 4 : 2}>
         {data.map((item, index) => (

@@ -197,7 +197,7 @@ const Routes = () => {
       />
       <Route
         exact
-        path="/staff-augmentation"
+        path="/talent-augmentation"
         render={matchProps => (
           <WithLayout
             {...matchProps}

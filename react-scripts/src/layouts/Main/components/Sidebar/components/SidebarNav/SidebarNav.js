@@ -180,7 +180,7 @@ const SidebarNav = props => {
           color="textPrimary"
           onClick={() => onClose()}
         >
-          Staff Augmentation
+          Talent Augmentation
         </Typography>
       </ListItem>
       <ListItem className={classes.listItem}>
