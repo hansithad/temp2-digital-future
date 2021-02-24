@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   imageAnimation: {
-    background: `url("https://assets.maccarianagency.com/the-front/web-screens/home/home-hero-bg-light.png")`,
+    background: `url("https://www.cobry.co.uk/wp-content/uploads/2020/10/Google-Workspace.png ")`,
     backgroundRepeat: 'repeat',
     backgroundAttachment: 'scroll',
     backgroundSize: '400px auto',
@@ -74,11 +74,11 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 
   const title = (
       <div>
-          <Typography variant="h2" component="span" className={classes.fontWeight900}>
+          <Typography variant="h3" component="span" className={classes.fontWeight900}>
               Transform Like the Best.
               <br/>
           </Typography>
-          <Typography variant="h4" component="span" className={classes.fontWeight900}>
+          <Typography variant="h3" component="span" className={classes.fontWeight900}>
               Boost efficiency & reduce cost through Cloud:
               <br/>
               <TypedText
