@@ -5,8 +5,6 @@ import {
   About,
   Features,
   Hero,
-  Jobs,
-  Pricings,
   Search,
   Team,
 } from './components';
@@ -14,8 +12,6 @@ import {
 import {
   features,
   team,
-  jobs,
-  pricings,
 } from './data';
 
 const useStyles = makeStyles(theme => ({
@@ -55,12 +51,6 @@ const StaffAugmentation = () => {
       <Section>
         <Team data={team} />
       </Section>
-      <Section>
-        <Pricings data={pricings} />
-      </Section>
-      <SectionAlternate innerNarrowed>
-        <Jobs data={jobs} />
-      </SectionAlternate>
       <Section>
         <Search />
       </Section>
