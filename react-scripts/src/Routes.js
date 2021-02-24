@@ -16,6 +16,7 @@ import {
   CareerListingMinimal as CareerListingMinimalView,
   CareerOpening as CareerOpeningView,
   ContactPage as ContactPageView,
+  CustomContactPage as CustomContactPageView,
   Coworking as CoworkingView,
   Elearning as ElearningView,
   Enterprise as EnterpriseView,
@@ -135,7 +136,7 @@ const Routes = () => {
         render={matchProps => (
           <WithLayout
             {...matchProps}
-            component={ContactPageView}
+            component={CustomContactPageView}
             layout={MainLayout}
           />
         )}
