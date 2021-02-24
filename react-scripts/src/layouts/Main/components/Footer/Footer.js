@@ -134,7 +134,6 @@ const Footer = props => {
       <div className={classes.menu}>
         <div>
           <MenuGroup item={services} />
-          <MenuGroup item={apps} />
         </div>
         <div>
           <MenuGroup item={web} />
@@ -156,15 +155,11 @@ const Footer = props => {
       <div className={classes.menu}>
         <div>
           <MenuGroup item={career} />
-          <MenuGroup item={helpCenter} />
         </div>
         <div>
           <MenuGroup item={company} />
-          <MenuGroup item={contact} />
         </div>
         <div>
-          <MenuGroup item={blog} />
-          <MenuGroup item={portfolio} />
         </div>
       </div>
     );
@@ -229,9 +224,9 @@ const Footer = props => {
               <Grid item>
                 <SupportedPages />
               </Grid>
-              <Grid item>
-                <AccountPages />
-              </Grid>
+              {/*<Grid item>*/}
+                {/*<AccountPages />*/}
+              {/*</Grid>*/}
             </Grid>
           </Grid>
         </Grid>

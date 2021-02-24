@@ -111,18 +111,6 @@ const Main = ({ children, themeToggler, themeMode }) => {
               title: 'Job Listing',
               href: '/job-listing',
             },
-            {
-              title: 'E-Learning',
-              href: '/e-learning',
-            },
-            {
-              title: 'E-commerce',
-              href: '/e-commerce',
-            },
-            {
-              title: 'Expo',
-              href: '/expo',
-            },
           ],
         },
         apps: {
@@ -153,34 +141,34 @@ const Main = ({ children, themeToggler, themeMode }) => {
               title: 'Basic',
               href: '/web-basic',
             },
-            {
-              title: 'Service',
-              href: '/service',
-            },
-            {
-              title: 'Startup',
-              href: '/startup',
-            },
-            {
-              title: 'Enterprise',
-              href: '/enterprise',
-            },
-            {
-              title: 'Cloud Hosting',
-              href: '/cloud-hosting',
-            },
-            {
-              title: 'Agency',
-              href: '/agency',
-            },
-            {
-              title: 'Design Company',
-              href: '/design-company',
-            },
-            {
-              title: 'Logistics',
-              href: '/logistics',
-            },
+            // {
+            //   title: 'Service',
+            //   href: '/service',
+            // },
+            // {
+            //   title: 'Startup',
+            //   href: '/startup',
+            // },
+            // {
+            //   title: 'Enterprise',
+            //   href: '/enterprise',
+            // },
+            // {
+            //   title: 'Cloud Hosting',
+            //   href: '/cloud-hosting',
+            // },
+            // {
+            //   title: 'Agency',
+            //   href: '/agency',
+            // },
+            // {
+            //   title: 'Design Company',
+            //   href: '/design-company',
+            // },
+            // {
+            //   title: 'Logistics',
+            //   href: '/logistics',
+            // },
           ],
         },
       },
@@ -222,22 +210,22 @@ const Main = ({ children, themeToggler, themeMode }) => {
         company: {
           groupTitle: 'Company',
           pages: [
-            {
-              title: 'About',
-              href: '/about',
-            },
-            {
-              title: 'About (Cover)',
-              href: '/about-side-cover',
-            },
-            {
-              title: 'Pricing',
-              href: '/pricing',
-            },
-            {
-              title: 'Terms',
-              href: '/company-terms',
-            },
+            // {
+            //   title: 'About',
+            //   href: '/about',
+            // },
+            // {
+            //   title: 'About (Cover)',
+            //   href: '/about-side-cover',
+            // },
+            // {
+            //   title: 'Pricing',
+            //   href: '/pricing',
+            // },
+            // {
+            //   title: 'Terms',
+            //   href: '/company-terms',
+            // },
           ],
         },
         contact: {
