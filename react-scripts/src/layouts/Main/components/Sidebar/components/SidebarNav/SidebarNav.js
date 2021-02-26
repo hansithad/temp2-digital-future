@@ -175,7 +175,7 @@ const SidebarNav = props => {
         <Typography
           variant="body2"
           component={'a'}
-          href='/job-listing'
+          href='/talent-augmentation'
           className={clsx(classes.navLink, 'submenu-item')}
           color="textPrimary"
           onClick={() => onClose()}
