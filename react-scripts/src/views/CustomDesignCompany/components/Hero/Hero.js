@@ -22,10 +22,10 @@ const Hero = props => {
             subtitle="Our mission is to help you boost your digital projects through consultancy services as a way to quickly transform into a digital champion and temporary talent augmentation service as an efficient way to enhance your workforce eliminating the risk of wrong hire in most critical moments."
             ctaGroup={[
               <Button color="primary" variant="contained" size="large">
-                Try for free
+                Consultancy
               </Button>,
               <Button color="secondary" variant="outlined" size="large">
-                See pricings
+                Talent Services
               </Button>,
             ]}
             disableGutter
