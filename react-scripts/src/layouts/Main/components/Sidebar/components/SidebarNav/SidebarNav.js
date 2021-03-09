@@ -160,6 +160,18 @@ const SidebarNav = props => {
         <Typography
           variant="body2"
           component={'a'}
+          href='/'
+          className={clsx(classes.navLink, 'submenu-item')}
+          color="textPrimary"
+          onClick={() => onClose()}
+        >
+          Home
+        </Typography>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Typography
+          variant="body2"
+          component={'a'}
           href='/digital-transformation'
           className={clsx(classes.navLink, 'submenu-item')}
           color="textPrimary"

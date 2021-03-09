@@ -78,6 +78,13 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
         }
     },
+    home:{
+      title: 'Home',
+      id: '/',
+      children:{
+
+      }
+    },
     digitalTransformation:{
       title: 'Digital Transformation',
       id: 'digital-transformation',

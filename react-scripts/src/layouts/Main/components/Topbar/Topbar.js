@@ -144,6 +144,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   const businessSolutions = pages.businessSolutions;
   const staffAugmentation = pages.staffAugmentation;
   const digitalTransformation = pages.digitalTransformation;
+  const home = pages.home;
   const resources = pages.resources;
 
   const MenuGroup = props => {
@@ -311,7 +312,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
       <div className={classes.flexGrow} />
       <Hidden smDown>
         <List disablePadding className={classes.navigationContainer}>
-        {[digitalTransformation,staffAugmentation].map((page, i) => (
+        {[home,digitalTransformation,staffAugmentation].map((page, i) => (
             <div key={page.id}>
                 <ListItem
                     aria-describedby={page.id}
