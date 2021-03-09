@@ -78,6 +78,13 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
         }
     },
+    digitalTransformation:{
+      title: 'Digital Transformation',
+      id: 'digital-transformation',
+      children:{
+
+      }
+    },
     staffAugmentation:{
         title: 'Talent Augmentation',
         id: 'talent-augmentation',

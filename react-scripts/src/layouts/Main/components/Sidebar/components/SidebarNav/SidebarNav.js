@@ -153,24 +153,21 @@ const SidebarNav = props => {
         </ListItemIcon>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Typography variant="h6" color="textPrimary" gutterBottom>
-          Cloud Product
-        </Typography>
-        <CloudProductPages />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Divider className={classes.divider} />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Typography variant="h6" color="textPrimary" gutterBottom>
-          Business Solutions
-        </Typography>
-        <BusinessSolutionsPages />
-      </ListItem>
-      <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />
       </ListItem>
 
+      <ListItem className={classes.listItem}>
+        <Typography
+          variant="body2"
+          component={'a'}
+          href='/digital-transformation'
+          className={clsx(classes.navLink, 'submenu-item')}
+          color="textPrimary"
+          onClick={() => onClose()}
+        >
+          Digital Transformation
+        </Typography>
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Typography
           variant="body2"
@@ -185,11 +182,6 @@ const SidebarNav = props => {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Typography variant="h6" color="textPrimary" gutterBottom>
-          Resources
-        </Typography>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button

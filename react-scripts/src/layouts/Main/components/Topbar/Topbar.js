@@ -143,6 +143,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
   const cloudProducts = pages.cloudProducts;
   const businessSolutions = pages.businessSolutions;
   const staffAugmentation = pages.staffAugmentation;
+  const digitalTransformation = pages.digitalTransformation;
   const resources = pages.resources;
 
   const MenuGroup = props => {
@@ -310,53 +311,7 @@ const Topbar = ({ themeMode, themeToggler, onSidebarOpen, pages, className, ...r
       <div className={classes.flexGrow} />
       <Hidden smDown>
         <List disablePadding className={classes.navigationContainer}>
-          {[cloudProducts,businessSolutions].map((page, i) => (
-            <div key={page.id}>
-              <ListItem
-                aria-describedby={page.id}
-                onClick={e => handleClick(e, page.id)}
-                className={clsx(
-                  classes.listItem,
-                  openedPopoverId === page.id ? classes.listItemActive : '',
-                )}
-              >
-                <Typography
-                  variant="body1"
-                  color="textPrimary"
-                  className={clsx(classes.listItemText, 'menu-item')}
-                >
-                  {page.title}
-                </Typography>
-                <ListItemIcon className={classes.listItemIcon}>
-                  <ExpandMoreIcon
-                    className={
-                      openedPopoverId === page.id ? classes.expandOpen : ''
-                    }
-                    fontSize="small"
-                  />
-                </ListItemIcon>
-              </ListItem>
-              <Popover
-                elevation={1}
-                id={page.id}
-                open={openedPopoverId === page.id}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
-                }}
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'center',
-                }}
-                classes={{ paper: classes.popover }}
-              >
-                <div>{renderPages(page.id)}</div>
-              </Popover>
-            </div>
-          ))}
-        {[staffAugmentation,resources].map((page, i) => (
+        {[digitalTransformation,staffAugmentation].map((page, i) => (
             <div key={page.id}>
                 <ListItem
                     aria-describedby={page.id}
