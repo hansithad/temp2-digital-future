@@ -28,6 +28,7 @@ import {
   Expo as ExpoView,
   Startup as StartupView,
   DesignCompany as DesignCompanyView,
+  CustomDesignCompany as CustomDesignCompanyView,
   MobileApp as MobileAppView,
   JobListing as JobListingView,
   Rental as RentalView,
@@ -70,7 +71,7 @@ const Routes = () => {
         render={matchProps => (
           <WithLayout
             {...matchProps}
-            component={IndexView}
+            component={CustomDesignCompanyView}
             layout={MainLayout}
           />
         )}

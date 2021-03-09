@@ -17,6 +17,7 @@ export { default as DesktopApp } from './DesktopApp';
 export { default as Expo } from './Expo';
 export { default as Startup } from './Startup';
 export { default as DesignCompany } from './DesignCompany';
+export { default as CustomDesignCompany } from './CustomDesignCompany';
 export { default as MobileApp } from './MobileApp';
 export { default as JobListing } from './JobListing';
 export { default as Rental } from './Rental';
