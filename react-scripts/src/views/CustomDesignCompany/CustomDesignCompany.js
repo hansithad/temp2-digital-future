@@ -8,12 +8,9 @@ import {
   Features,
   Hero,
   Integrations,
-  Pricings,
-  Reviews,
-  Subscription,
 } from './components';
 
-import { integrations, reviews } from './data';
+import { integrations } from './data';
 
 const useStyles = makeStyles(theme => ({
   hero: {
@@ -51,15 +48,6 @@ const CustomDesignCompany = () => {
       <SectionAlternate innerNarrowed>
         <Features />
       </SectionAlternate>
-      <SectionAlternate className={classes.reviewSection}>
-        <Reviews data={reviews} />
-      </SectionAlternate>
-      <Section narrow>
-        <Pricings />
-      </Section>
-      <Section className={classes.sectionSubscription}>
-        <Subscription data-aos="fade-up" />
-      </Section>
       <Divider />
     </div>
   );
