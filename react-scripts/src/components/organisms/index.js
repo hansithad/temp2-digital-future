@@ -5,6 +5,7 @@ export { default as CardBase } from './CardBase';
 export { default as CardReview } from './CardReview';
 export { default as CardCategory } from './CardCategory';
 export { default as CardJob } from './CardJob';
+export { default as CustomCardJob } from './CustomCardJob';
 export { default as CardJobMinimal } from './CardJobMinimal';
 export { default as CardJobTag } from './CardJobTag';
 export { default as CardJobCompany } from './CardJobCompany';

@@ -3,6 +3,7 @@ export { default as IndexView } from './IndexView';
 export { default as Agency } from './Agency';
 export { default as CareerListing } from './CareerListing';
 export { default as CareerListingMinimal } from './CareerListingMinimal';
+export { default as CustomCareerListingMinimal } from './CustomCareerListingMinimal';
 export { default as CareerOpening } from './CareerOpening';
 export { default as ContactPage } from './ContactPage';
 export { default as CustomContactPage } from './CustomContactPage';

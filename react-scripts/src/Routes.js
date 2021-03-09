@@ -14,6 +14,7 @@ import {
   Agency as AgencyView,
   CareerListing as CareerListingView,
   CareerListingMinimal as CareerListingMinimalView,
+  CustomCareerListingMinimal as CustomCareerListingMinimalView,
   CareerOpening as CareerOpeningView,
   ContactPage as ContactPageView,
   CustomContactPage as CustomContactPageView,
@@ -203,7 +204,7 @@ const Routes = () => {
         render={matchProps => (
           <WithLayout
             {...matchProps}
-            component={StaffAugmentation}
+            component={CustomCareerListingMinimalView}
             layout={MainLayout}
           />
         )}
