@@ -94,6 +94,7 @@ const CustomCareerListingMinimal = () => {
           </Drawer>
         </Toolbar>
       </AppBar>
+
     </div>
 
   )

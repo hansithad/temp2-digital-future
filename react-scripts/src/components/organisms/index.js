@@ -1,3 +1,5 @@
+import CustomContactForm from "./CustomContactForm/CustomContactForm";
+
 export { default as Section } from './Section';
 export { default as SectionAlternate } from './SectionAlternate';
 export { default as DescriptionListIcon } from './DescriptionListIcon';
@@ -22,3 +24,4 @@ export { default as CardPricingStandard } from './CardPricingStandard';
 export { default as CardPricingCustom } from './CardPricingCustom';
 export { default as Parallax } from './Parallax';
 export { default as ContactForm } from './ContactForm';
+export { default as CustomContactForm } from './CustomContactForm';
