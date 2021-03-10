@@ -20,7 +20,7 @@ import dfLogo  from './digital_future_yellow.svg'
 
 const useStyles = makeStyles(theme => ({
   flexGrow: {
-    flexGrow: 1,
+    flexGrow: 0.5,
   },
   navigationContainer: {
     display: 'flex',
