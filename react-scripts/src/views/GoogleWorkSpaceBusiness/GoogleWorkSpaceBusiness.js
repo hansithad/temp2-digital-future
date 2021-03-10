@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   forumIcon: {
-    color: 'white',
+    color: theme.palette.background.default,
     width: 25,
     height: 25,
   },
