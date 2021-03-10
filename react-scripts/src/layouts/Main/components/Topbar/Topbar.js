@@ -99,8 +99,9 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
   },
   darkLogoImage: {
-    width: '100%',
-    height: '95%',
+    objectFit: 'cover',
+    width: '240px',
+    height: '100%',
     filter: 'invert(100%)',
   },
   menu: {
