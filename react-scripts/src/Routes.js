@@ -189,7 +189,7 @@ const Routes = () => {
       />
       <Route
         exact
-        path="/google-workspace-business"
+        path="/digital-transformation"
         render={matchProps => (
           <WithLayout
             {...matchProps}
