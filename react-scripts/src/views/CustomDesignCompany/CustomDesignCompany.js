@@ -164,7 +164,7 @@ const CustomDesignCompany = () => {
       </AppBar>
       <Snackbar open={openSnack} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success">
-          Your feedback saved successfully
+          Thank you for contacting us. We will reply shortly
         </Alert>
       </Snackbar>
       <Backdrop className={classes.backdrop} open={openLoader} >
