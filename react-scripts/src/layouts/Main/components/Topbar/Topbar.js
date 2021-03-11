@@ -16,7 +16,7 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Image, DarkModeToggler } from 'components/atoms';
-import dfLogo  from './digital_future_yellow.svg'
+import dfLogo  from '../../../../assets/images/digital_future_yellow.svg'
 
 const useStyles = makeStyles(theme => ({
   flexGrow: {

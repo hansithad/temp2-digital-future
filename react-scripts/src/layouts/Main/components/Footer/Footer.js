@@ -15,6 +15,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 
 import { Image } from 'components/atoms';
+import dfLogo  from '../../../../assets/images/digital_future_yellow.svg'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -41,7 +42,9 @@ const useStyles = makeStyles(theme => ({
     height: 32,
   },
   logoImage: {
-    width: '100%',
+    width: '200px',
+    objectFit: 'cover',
+    filter:'invert(100%)',
     height: '100%',
   },
   groupTitle: {
@@ -190,29 +193,16 @@ const Footer = props => {
             <List disablePadding>
               <ListItem disableGutters className={classes.logoContainerItem}>
                 <div className={classes.logoContainer}>
-                  <a href="/" title="thefront">
+                  <a href="/" title="Digital Future">
                     <Image
                       className={classes.logoImage}
-                      src="https://assets.maccarianagency.com/the-front/logos/logo-negative.svg"
-                      alt="thefront"
+                      // src="https://assets.maccarianagency.com/the-front/logos/logo-negative.svg"
+                      src={dfLogo}
+                      alt="Digital Future"
                       lazy={false}
                     />
                   </a>
                 </div>
-              </ListItem>
-              <ListItem disableGutters>
-                <IconButton className={classes.socialIcon}>
-                  <FacebookIcon className={classes.icon} />
-                </IconButton>
-                <IconButton className={classes.socialIcon}>
-                  <InstagramIcon className={classes.icon} />
-                </IconButton>
-                <IconButton className={classes.socialIcon}>
-                  <TwitterIcon className={classes.icon} />
-                </IconButton>
-                <IconButton className={classes.socialIcon}>
-                  <PinterestIcon className={classes.icon} />
-                </IconButton>
               </ListItem>
             </List>
           </Grid>
