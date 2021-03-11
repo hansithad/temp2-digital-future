@@ -114,17 +114,14 @@ const Main = ({ children, themeToggler, themeMode }) => {
           groupTitle: 'Services',
           pages: [
             {
-              title: 'Coworking',
-              href: '/coworking',
+              title: 'Digital Transformation',
+              href: '/',
             },
             {
-              title: 'Rental',
+              title: 'Talent Augmentation',
               href: '/rental',
-            },
-            {
-              title: 'Job Listing',
-              href: '/job-listing',
-            },
+            }
+
           ],
         },
         apps: {
@@ -141,48 +138,20 @@ const Main = ({ children, themeToggler, themeMode }) => {
           ],
         },
         web: {
-          groupTitle: 'Web',
+          groupTitle: 'Digital Talent',
           pages: [
             {
-              title: 'Marketing',
-              href: '/',
+              title: 'Dedicated Requirement',
+              href: '/talent-augmentation',
             },
             {
-              title: 'Overview',
-              href: '/home',
+              title: 'Managed HR Processes',
+              href: '/talent-augmentation',
             },
             {
-              title: 'Basic',
-              href: '/web-basic',
-            },
-            // {
-            //   title: 'Service',
-            //   href: '/service',
-            // },
-            // {
-            //   title: 'Startup',
-            //   href: '/startup',
-            // },
-            // {
-            //   title: 'Enterprise',
-            //   href: '/enterprise',
-            // },
-            // {
-            //   title: 'Cloud Hosting',
-            //   href: '/cloud-hosting',
-            // },
-            // {
-            //   title: 'Agency',
-            //   href: '/agency',
-            // },
-            // {
-            //   title: 'Design Company',
-            //   href: '/design-company',
-            // },
-            // {
-            //   title: 'Logistics',
-            //   href: '/logistics',
-            // },
+              title: 'Managed Talent Augmentation',
+              href: '/talent-augmentation',
+            }
           ],
         },
       },
@@ -192,19 +161,19 @@ const Main = ({ children, themeToggler, themeMode }) => {
       id: 'supported-pages',
       children: {
         career: {
-          groupTitle: 'Career',
+          groupTitle: 'Digital Transformation',
           pages: [
             {
-              title: 'Lising',
-              href: '/career-listing',
+              title: 'Data Strategy',
+              href: '/digital-transformation',
             },
             {
-              title: 'Lising Minimal',
-              href: '/career-listing-minimal',
+              title: 'Cloud Strategy',
+              href: '/digital-transformation',
             },
             {
-              title: 'Opening',
-              href: '/career-opening',
+              title: 'Martech Strategy',
+              href: '/digital-transformation',
             },
           ],
         },
@@ -222,7 +191,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
           ],
         },
         company: {
-          groupTitle: 'Company',
+          groupTitle: 'Contact',
           pages: [
             // {
             //   title: 'About',

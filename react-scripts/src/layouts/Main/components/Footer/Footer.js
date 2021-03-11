@@ -160,7 +160,18 @@ const Footer = props => {
           <MenuGroup item={career} />
         </div>
         <div>
-          <MenuGroup item={company} />
+          <List disablePadding className={classes.menuItem}>
+            <ListItem disableGutters className={classes.menuGroupItem}>
+              <Typography
+                variant="body2"
+                component={'a'}
+                className={classes.menuGroupTitle}
+                href='/contact'
+              >
+                Contact
+              </Typography>
+            </ListItem>
+          </List>
         </div>
         <div>
         </div>
