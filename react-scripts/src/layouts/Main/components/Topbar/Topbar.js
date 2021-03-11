@@ -94,11 +94,27 @@ const useStyles = makeStyles(theme => ({
     },
   },
   logoImage: {
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 100,
+      height: '100%',
+    },
+    [theme.breakpoints.down('md')]: {
+      maxWidth: 150,
+      height: '100%',
+    },
     objectFit: 'cover',
     width: '240px',
     height: '100%',
   },
   darkLogoImage: {
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 100,
+      height: '100%',
+    },
+    [theme.breakpoints.down('md')]: {
+      maxWidth: 150,
+      height: '100%',
+    },
     objectFit: 'cover',
     width: '240px',
     height: '100%',
