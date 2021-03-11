@@ -13,6 +13,7 @@ import {
 
 import { integrations } from './data';
 import ForumIcon from "@material-ui/icons/Forum";
+import {postData ,BASE_URL } from '../../service/request'
 
 const useStyles = makeStyles(theme => ({
   hero: {
@@ -104,31 +105,13 @@ const CustomDesignCompany = () => {
 
     setOpenLoader(true);
     handleBottombarClose();
-    postData('https://script.google.com/macros/s/AKfycbyTT3r288vZfGaeKGRON7SUZk1HLZdJssRgqfrKvLCou4yPkzrTf8hpGzviT30AI033/exec',
-      formValues)
+    postData(BASE_URL,formValues)
       .then(data => {
-        console.log(data); // JSON data parsed by `data.json()` call
         setOpenLoader(false);
         setOpenSnack(true);
       });
   };
 
-  async function postData(url = '', data = {}) {
-    // Default options are marked with *
-    const response = await fetch(url, {
-      method: 'POST',
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'omit',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer',
-      body: new URLSearchParams(data)
-    });
-    return response.json(); // parses JSON response into native JavaScript objects
-  }
 
   return (
     <div>
