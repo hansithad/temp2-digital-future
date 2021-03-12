@@ -89,6 +89,21 @@ const CustomCareerListingMinimal = () => {
       });
   };
 
+  const newsletterSubmission = (formValues,callback)=>{
+
+    setOpenLoader(true);
+
+    //ADDING message
+    formValues['message'] = '####NewsLetter request#####';
+
+    postData(BASE_URL,formValues)
+      .then(data => {
+        callback();
+        setOpenLoader(false);
+        setOpenSnack(true);
+      });
+  };
+
 
   return (
     <div>
@@ -104,7 +119,7 @@ const CustomCareerListingMinimal = () => {
         <CustomJobs data={jobs}/>
       </SectionAlternate>
       <Section>
-        <Newsletter/>
+        <Newsletter postSubmission={newsletterSubmission}/>
       </Section>
       <Divider/>
       <AppBar position="fixed" className={classes.appBarBottom}>
@@ -126,7 +141,7 @@ const CustomCareerListingMinimal = () => {
           </Drawer>
         </Toolbar>
       </AppBar>
-      <Snackbar open={openSnack} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar open={openSnack} autoHideDuration={2000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success">
           Thank you for contacting us. We will reply shortly
         </Alert>

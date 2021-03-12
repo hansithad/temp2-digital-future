@@ -5,12 +5,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   colors,
   FormControl,
+  FormHelperText,
   OutlinedInput,
-  InputAdornment,
+  InputAdornment, Button, Grid, TextField,
 } from '@material-ui/core';
 import { Icon } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import { Section } from 'components/organisms';
+import validate from "validate.js";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,11 +47,79 @@ const useStyles = makeStyles(theme => ({
       color: 'white !important',
     },
   },
+
+  paddingTop: {
+    paddingTop:'8px'
+  }
 }));
 
+const schema = {
+  email: {
+    presence: { allowEmpty: false, message: 'is required' },
+    email: true,
+    length: {
+      maximum: 300,
+    },
+  }
+};
+
 const Newsletter = props => {
-  const { data, className, ...rest } = props;
+  const { data, postSubmission,className, ...rest } = props;
   const classes = useStyles();
+
+  const [formState, setFormState] = React.useState({
+    isValid: false,
+    values: {},
+    touched: {},
+    errors: {},
+  });
+
+  React.useEffect(() => {
+    const errors = validate(formState.values, schema);
+
+    setFormState(formState => ({
+      ...formState,
+      isValid: errors ? false : true,
+      errors: errors || {},
+    }));
+  }, [formState.values]);
+
+  const handleChange = event => {
+    event.persist();
+
+    setFormState(formState => ({
+      ...formState,
+      values: {
+        ...formState.values,
+        [event.target.name]:
+          event.target.type === 'checkbox'
+            ? event.target.checked
+            : event.target.value,
+      },
+      touched: {
+        ...formState.touched,
+        [event.target.name]: true,
+      },
+    }));
+  };
+
+  const hasError = field =>
+    formState.touched[field] && formState.errors[field] ? true : false;
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    postSubmission(formState.values,submitSuccessCallBack);
+  };
+
+  const submitSuccessCallBack = ()=>{
+    setFormState(formState => ({
+      isValid: false,
+      values: {},
+      touched: {},
+      errors: {}
+
+    }));
+  };
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -77,6 +147,12 @@ const Newsletter = props => {
             className={classes.formControl}
           >
             <OutlinedInput
+              helperText={
+                hasError('email') ? formState.errors.email[0] : null
+              }
+              error={hasError('email')}
+              onChange={handleChange}
+              name="email"
               endAdornment={
                 <InputAdornment position="end">
                   <Icon
@@ -86,9 +162,29 @@ const Newsletter = props => {
                 </InputAdornment>
               }
               placeholder="Enter your email"
+              value={formState.values.email || ''}
             />
+            {hasError('email') && (
+              <FormHelperText error id="accountId-error">
+                {hasError('email') ? formState.errors.email[0] : null}
+              </FormHelperText>
+            )}
           </FormControl>
         </div>
+          <div className={classes.paddingTop}>
+            <Grid item container justify="center" xs={12}>
+              <Button
+                variant="contained"
+                type="submit"
+                color="secondry"
+                size="large"
+                disabled={!formState.isValid}
+                onClick={handleSubmit}
+              >
+                Subscribe
+              </Button>
+            </Grid>
+          </div>
         </>
       </Section>
     </div>
