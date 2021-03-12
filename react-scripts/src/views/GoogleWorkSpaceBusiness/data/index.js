@@ -449,3 +449,10 @@ export const cloudFeatures = {
     "Enhanced after sales services: User and Administration Support.",
   ],
 };
+
+export const mobileapp = [
+  'Our sign up is dead simple. We only require your basic company information',
+  'We support bulk uploading via SQL, integrations with most data storage products',
+  "Simply select where you'd like to transfer your data ",
+  'Affordable, scalable and performant. The perfect solution for small apps.',
+];

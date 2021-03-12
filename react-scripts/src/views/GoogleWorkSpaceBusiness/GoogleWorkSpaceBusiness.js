@@ -17,7 +17,7 @@ import {
   Reviews,
   Team,
   VideoSection,
-  MobileFeatures,
+  MobileApp,
   Pricings,
   CloudFeatures
 } from './components';
@@ -28,7 +28,7 @@ import {
   reviews,
   integrations,
   customizations,
-  team,
+  mobileapp,
   mobileFeatures,
   pricings,
   cloudFeatures
@@ -141,7 +141,9 @@ const GoogleWorkSpaceBusiness = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <MobileFeatures data={mobileFeatures} />
+        <MobileApp imageUrl='monitor' imageSide='right' data={mobileapp} />
+        <MobileApp imageUrl='dashboard' imageSide='left' data={mobileapp} />
+        <MobileApp imageUrl='progressiveApp' imageSide='right' data={mobileapp} />
       </Section>
       <Section style={{paddingTop:0}}>
         <Divider />
