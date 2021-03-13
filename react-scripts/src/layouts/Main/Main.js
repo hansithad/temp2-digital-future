@@ -382,7 +382,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
         <Divider />
         {children}
       </main>
-      <Footer pages={pages} />
+      <Footer pages={pages} themeMode={themeMode} />
     </div>
   );
 };

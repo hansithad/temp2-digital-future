@@ -16,6 +16,7 @@ import PinterestIcon from '@material-ui/icons/Pinterest';
 
 import { Image } from 'components/atoms';
 import dfLogo  from '../../../../assets/images/digital_future_yellow.svg'
+import dfLogoDark  from '../../../../assets/images/digital_future_yellow_white.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,7 +45,13 @@ const useStyles = makeStyles(theme => ({
   logoImage: {
     width: '200px',
     objectFit: 'cover',
-    filter:'invert(100%)',
+    filter:'invert(4%)',
+    height: '100%',
+  },
+  logoImageDark: {
+    width: '200px',
+    objectFit: 'cover',
+    filter:'invert(4%)',
     height: '100%',
   },
   groupTitle: {
@@ -98,7 +105,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Footer = props => {
-  const { pages, className, ...rest } = props;
+  const { pages, themeMode,className, ...rest } = props;
 
   const classes = useStyles();
 
@@ -206,9 +213,9 @@ const Footer = props => {
                 <div className={classes.logoContainer}>
                   <a href="/" title="Digital Future">
                     <Image
-                      className={classes.logoImage}
+                      className={themeMode==='light'?classes.logoImage:classes.logoImageDark}
                       // src="https://assets.maccarianagency.com/the-front/logos/logo-negative.svg"
-                      src={dfLogo}
+                      src={themeMode==='light'? dfLogoDark:dfLogoDark}
                       alt="Digital Future"
                       lazy={false}
                     />
