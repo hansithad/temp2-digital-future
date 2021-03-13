@@ -28,7 +28,7 @@ import {
   reviews,
   integrations,
   customizations,
-  mobileapp,
+  mobileapp1,mobileapp2,
   mobileFeatures,
   pricings,
   cloudFeatures
@@ -141,9 +141,8 @@ const GoogleWorkSpaceBusiness = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <MobileApp imageUrl='monitor' imageSide='right' data={mobileapp} />
-        <MobileApp imageUrl='dashboard' imageSide='left' data={mobileapp} />
-        <MobileApp imageUrl='progressiveApp' imageSide='right' data={mobileapp} />
+        <MobileApp imageUrl='monitor' imageSide='right' data={mobileapp1} />
+        <MobileApp imageUrl='progressiveApp' imageSide='left' data={mobileapp2} />
       </Section>
       <Section style={{paddingTop:0}}>
         <Divider />

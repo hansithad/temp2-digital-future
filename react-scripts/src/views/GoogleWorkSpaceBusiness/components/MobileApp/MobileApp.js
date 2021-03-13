@@ -32,7 +32,6 @@ const MobileApp = props => {
   const classes = useStyles();
 
   let matchedImageUrl = null;
-  console.log('imageUrl >>> '+imageUrl);
   if(imageUrl=='dashboard'){
     matchedImageUrl = dashboardExtended;
   }
@@ -61,14 +60,14 @@ const MobileApp = props => {
             direction="column"
           >
             <SectionHeader
-              label="COMPLETE CONTROL"
-              title="Monitor and analyze usage patterns."
-              subtitle="Keep track of what's happening with your data, change permissions, and run reports against your data anywhere in the world."
+              label={data.label}
+              title={data.title}
+              subtitle={data.subtitle}
               align="left"
               disableGutter
             />
             <Grid container spacing={2}>
-              {data.map((item, index) => (
+              {data.data.map((item, index) => (
                 <Grid item xs={12} sm={6} key={index} data-aos="fade-up">
                   <ListItem disableGutters>
                     <ListItemAvatar className={classes.listItemAvatar}>
@@ -96,14 +95,14 @@ const MobileApp = props => {
             direction="column"
           >
             <SectionHeader
-              label="COMPLETE CONTROL"
-              title="Monitor and analyze usage patterns."
-              subtitle="Keep track of what's happening with your data, change permissions, and run reports against your data anywhere in the world."
+              label={data.label}
+              title={data.title}
+              subtitle={data.subtitle}
               align="left"
               disableGutter
             />
             <Grid container spacing={2}>
-              {data.map((item, index) => (
+              {data.data.map((item, index) => (
                 <Grid item xs={12} sm={6} key={index} data-aos="fade-up">
                   <ListItem disableGutters>
                     <ListItemAvatar className={classes.listItemAvatar}>

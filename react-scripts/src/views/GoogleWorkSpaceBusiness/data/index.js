@@ -132,21 +132,21 @@ export const customizations = [
       'We offer a full scope of activation, data migration and change management services. Everything that is needed to execute stress free implementation.',
   },
   {
-    title: 'Data Security Support & Trainings',
+    title: 'Data Security Support',
     description:
-      'Best in class expertise engaged to secure your internal data. You can outsource security administration to us or have us train your IT team.',
+      'Data security is one of the most important aspects of digital transformation. We give extra care to secure your internal data and help to apply data security best practice in your organization.',
     icon: 'fas fa-lock',
   },
   {
     title: 'User Support & Trainings',
     description:
-      'Get your employees up to speed with Google Workspace through our user support services and Workspace Apps trainings.',
+      'Get your employees up to speed with new digital tools through our user support services and trainings.',
     icon: 'fas fa-hand-holding-heart',
   },
   {
-    title: 'Google Cloud Partner Benefits',
+    title: 'Work with Certified Partner',
     description:
-      'As Partner Program member we offer exclusive benefits to our clients: 30 days free trial period, individual pricing, Google certified staff.',
+      'Being a Partner Program member with top Digital Tech providers we offer exclusive benefits to our clients.',
     icon: 'fas fa-plus',
   },
 ];
@@ -450,9 +450,24 @@ export const cloudFeatures = {
   ],
 };
 
-export const mobileapp = [
-  'Our sign up is dead simple. We only require your basic company information',
-  'We support bulk uploading via SQL, integrations with most data storage products',
-  "Simply select where you'd like to transfer your data ",
-  'Affordable, scalable and performant. The perfect solution for small apps.',
-];
+export const mobileapp1 = {
+  label:'DATA',
+  title:'Data Strategy Consulting',
+  subtitle:'Our data consulting services look to eliminate data silos and reduce the time to insights for your employees.',
+  data:[
+  'Data Warehouses: Create single, standardized, comprehensive source of data for all functions of your company.',
+  'Data Intelligence: introduce data-first culture where everyone can reach the required data sets in minutes.',
+  "Data Utilization: ML, AI, Forecasts, Automation - prepare your organization for advanced data utilization methods.",
+  'Big Data: Scalable cloud infrastructure to manage large data sets in cost efficient way.',
+]};
+
+export const mobileapp2 = {
+  label:'CLOUD',
+  title:'Modern Cloud Solutions',
+  subtitle:'Through Cloud Consulting we aim to improve your agility, reduce cost of IT and prepare for flexible scalability.',
+  data:[
+    'Managed Infrastructure: reduce time of your IT team spent on infrastructure management.',
+    'Managed Services: Use ready made AI, ML, Voice, Video and text recognition services.',
+    "Easily Manage IT Costs: Fully predictable cost management, pay only for actual usage.",
+    'Cloud Workforce Solutions: cloud toolset (storage, office suite) for remote work.',
+  ]};

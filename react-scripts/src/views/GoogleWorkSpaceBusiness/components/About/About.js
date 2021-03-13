@@ -32,15 +32,15 @@ const About = props => {
               <SectionHeader
                 title={
                   <div>
-                  <p>Cloud Based Office Suite.{' '}</p>
+                  <p>Comprehensive{' '}</p>
                   <span>
                     <Typography component="span" variant="inherit" color="primary">
-                      Powered and Used by Google for Remote Work.
+                      Digital Transformation Services
                     </Typography>{' '}
                   </span>
                   </div>
                 }
-                subtitle="Everything your employees need for remote, real-time, efficient collaboration. Available from anywhere, anytime, from any device. With enterprise data security level."
+                subtitle="Everything your organization needs to get digital ready. From collecting to utilzing data, from legacy systems to modern cloud architecture, from offline marketing and sales to digital marketing champion."
                 ctaGroup={[
                   <Button
                     variant="contained"
@@ -48,15 +48,8 @@ const About = props => {
                     size={isMd ? 'large' : 'medium'}
                     onClick={handleBottombarOpen}
                   >
-                    Start a Free Trial
-                  </Button>,
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    size={isMd ? 'large' : 'medium'}
-                  >
-                      SEE WORKSPACE APPS
-                  </Button>,
+                    Ask about our services
+                  </Button>
                 ]}
                 align={isMd ? 'left' : 'center'}
                 disableGutter
