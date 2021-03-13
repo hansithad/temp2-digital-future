@@ -422,7 +422,7 @@ export const cloudFeatures = {
       icon: '',
       title: '1. Activation and Migration',
       subtitle:
-        'Having selected the licence type, we will activate email accounts, groups, shared mailboxes and migrate your legacy email and storage data preparing for transition.',
+        'Having selected the right technology for your needs we will migrate your legacy data and activate the new tools.',
     },
     {
       icon: 'headset',
@@ -434,13 +434,13 @@ export const cloudFeatures = {
       icon: 'cache',
       title: '2. Transition',
       subtitle:
-        'Once everything is prepared for go-live we will apply best practices of change management suggested by Google to ensure smooth transition of users (including trainings) and no downtime for your company.',
+        'Once everything is prepared for go-live we will apply best practices of change management to ensure a smooth transition of users (including trainings) and no downtime for your company.',
     },
     {
       icon: 'user',
       title: '4. Security Support',
       subtitle:
-        'Our Admin Managed Service can take the full burden the Workspace Administration and Security Management from your company.',
+        'Last and one of the most important steps - we double-check your security setup and ensure best-practice is applied.',
     },
   ],
   properties: [

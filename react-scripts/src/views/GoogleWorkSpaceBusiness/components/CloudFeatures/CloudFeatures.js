@@ -164,8 +164,8 @@ const CloudFeatures = props => {
           >
             <SectionHeader
               label="SEAMLESS IMPLEMENTATION"
-              title="From zero to Workspace hero in just few weeks."
-              subtitle="With the right change management processes applied you can get through full migration, activation processes smooth and turn your organization into real cloud champion in no time."
+              title="From zero to Digital Hero."
+              subtitle="With the right change management processes applied you can get through full migration, activation processes smooth and turn your organization into a real digital champion in no time."
               align="left"
               disableGutter
             />
