@@ -5,6 +5,8 @@ import { useMediaQuery, Grid } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 
+import teamBuild from '../../../../assets/images/team_build.svg'
+
 const useStyles = makeStyles(() => ({
   image: {
     maxWidth: 500,
@@ -51,7 +53,7 @@ const Teaser = props => {
           data-aos={'fade-up'}
         >
           <Image
-            src="https://assets.maccarianagency.com/the-front/illustrations/relax-in-sofa.svg"
+            src={teamBuild}
             alt="Features"
             className={classes.image}
           />

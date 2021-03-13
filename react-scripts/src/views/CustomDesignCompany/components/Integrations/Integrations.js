@@ -7,6 +7,8 @@ import { LearnMoreLink, Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import { CardBase } from 'components/organisms';
 
+import teamBuild  from '../../../../assets/images/team_build.svg';
+
 const useStyles = makeStyles(() => ({
   logo: {
     maxWidth: 50,
@@ -59,20 +61,10 @@ const Integrations = props => {
             direction={isMd ? 'row' : 'column-reverse'}
           >
             <Grid item xs={12} md={6} data-aos="fade-up">
-              <Grid container spacing={2}>
-                {data.map((item, index) => (
-                  <Grid item xs={4} key={index}>
-                    <CardBase withShadow liftUp>
-                      <Image
-                        src={item.logo}
-                        alt={item.name}
-                        className={classes.logo}
-                        lazy={false}
-                      />
-                    </CardBase>
-                  </Grid>
-                ))}
-              </Grid>
+              <Image
+                src={teamBuild}
+                alt="Integrations"
+              />
             </Grid>
             <Grid item xs={12} md={6} data-aos="fade-up">
               <SectionHeader
