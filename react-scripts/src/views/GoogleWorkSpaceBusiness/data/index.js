@@ -455,10 +455,10 @@ export const mobileapp1 = {
   title:'Data Strategy Consulting',
   subtitle:'Our data consulting services look to eliminate data silos and reduce the time to insights for your employees.',
   data:[
-  'Data Warehouses: Create single, standardized, comprehensive source of data for all functions of your company.',
+  'Data Warehouses: create single, standardized, comprehensive source of data for all functions of your company.',
   'Data Intelligence: introduce data-first culture where everyone can reach the required data sets in minutes.',
   "Data Utilization: ML, AI, Forecasts, Automation - prepare your organization for advanced data utilization methods.",
-  'Big Data: Scalable cloud infrastructure to manage large data sets in cost efficient way.',
+  'Big Data: scalable cloud infrastructure to manage large data sets in a cost efficient way.',
 ]};
 
 export const mobileapp2 = {
@@ -467,7 +467,7 @@ export const mobileapp2 = {
   subtitle:'Through Cloud Consulting we aim to improve your agility, reduce cost of IT and prepare for flexible scalability.',
   data:[
     'Managed Infrastructure: reduce time of your IT team spent on infrastructure management.',
-    'Managed Services: Use ready made AI, ML, Voice, Video and text recognition services.',
-    "Easily Manage IT Costs: Fully predictable cost management, pay only for actual usage.",
+    'Managed Services: use ready made cloud AI, ML, Voice, Video and text recognition services.',
+    "Easily Manage IT Costs: fully predictable cost management, pay only for actual usage.",
     'Cloud Workforce Solutions: cloud toolset (storage, office suite) for remote work.',
   ]};

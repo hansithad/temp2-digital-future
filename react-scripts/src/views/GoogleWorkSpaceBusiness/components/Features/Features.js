@@ -31,7 +31,7 @@ const Features = props => {
             <Typography color="secondary" variant="inherit" component="span">with Digital Future</Typography>
           </span>
         }
-        subtitle="As officially certified Google Workspace Partner we offer comprehensive services and know-how."
+        subtitle="Certified, experienced partner for your digital transformation needs."
         ctaGroup={[
           <Button
             variant="outlined"
