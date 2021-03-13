@@ -9,6 +9,7 @@ import {
   Features,
   Hero,
   Integrations,
+  Newsletter
 } from './components';
 
 import { integrations } from './data';
@@ -113,6 +114,21 @@ const CustomDesignCompany = () => {
   };
 
 
+  const newsletterSubmission = (formValues,callback)=>{
+
+    setOpenLoader(true);
+
+    //ADDING message
+    formValues['message'] = '####NewsLetter request#####';
+
+    postData(BASE_URL,formValues)
+      .then(data => {
+        callback();
+        setOpenLoader(false);
+        setOpenSnack(true);
+      });
+  };
+
   return (
     <div>
       <Hero data-aos="fade-up" className={classes.hero} />
@@ -125,6 +141,9 @@ const CustomDesignCompany = () => {
       <SectionAlternate innerNarrowed>
         <Features />
       </SectionAlternate>
+      <Section>
+        <Newsletter postSubmission={newsletterSubmission}/>
+      </Section>
       <Divider />
       <AppBar position="fixed" className={classes.appBarBottom}>
         <Toolbar disableGutters className={classes.toolbarBottom}>
