@@ -18,7 +18,7 @@ import {
   Team,
   VideoSection,
   MobileApp,
-  Pricings,
+  Newsletter,
   CloudFeatures
 } from './components';
 
@@ -33,9 +33,8 @@ import {
   pricings,
   cloudFeatures
 } from './data';
-import {features} from "../CloudHosting/data";
 import MuiAlert from "@material-ui/lab/Alert";
-import {postData ,BASE_URL } from '../../service/request'
+import {postData ,BASE_URL } from '../../service/request';
 
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
@@ -122,7 +121,20 @@ const GoogleWorkSpaceBusiness = () => {
       });
   };
 
+  const newsletterSubmission = (formValues,callback)=>{
 
+    setOpenLoader(true);
+
+    //ADDING message
+    formValues['message'] = '####NewsLetter request#####';
+
+    postData(BASE_URL,formValues)
+      .then(data => {
+        callback();
+        setOpenLoader(false);
+        setOpenSnack(true);
+      });
+  };
 
   return (
     <div className={classes.root}>
@@ -150,6 +162,9 @@ const GoogleWorkSpaceBusiness = () => {
       <Section style={{paddingTop:0}}>
         <CloudFeatures data={cloudFeatures} handleBottombarOpen={handleBottombarOpen} />
       </Section>
+      <Section>
+        <Newsletter postSubmission={newsletterSubmission}/>
+      </Section>
       <Divider />
       <AppBar position="fixed" className={classes.appBarBottom}>
         <Toolbar disableGutters className={classes.toolbarBottom}>
@@ -170,7 +185,7 @@ const GoogleWorkSpaceBusiness = () => {
           </Drawer>
         </Toolbar>
       </AppBar>
-      <Snackbar open={openSnack} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar open={openSnack} autoHideDuration={2000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success">
           Thank you for contacting us. We will reply shortly
         </Alert>

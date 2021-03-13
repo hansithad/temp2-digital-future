@@ -164,7 +164,7 @@ const CustomDesignCompany = () => {
           </Drawer>
         </Toolbar>
       </AppBar>
-      <Snackbar open={openSnack} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar open={openSnack} autoHideDuration={2000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success">
           Thank you for contacting us. We will reply shortly
         </Alert>

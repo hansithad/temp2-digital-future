@@ -9,3 +9,4 @@ export { default as MobileFeatures } from './MobileFeatures';
 export { default as Pricings } from './Pricings';
 export { default as CloudFeatures } from './CloudFeatures';
 export { default as MobileApp } from './MobileApp';
+export { default as Newsletter } from './Newsletter';
