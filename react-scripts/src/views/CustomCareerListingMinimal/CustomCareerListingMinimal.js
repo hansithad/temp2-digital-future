@@ -1,9 +1,9 @@
 import React from 'react';
 import {AppBar, Backdrop, CircularProgress, Divider, Drawer, IconButton, Snackbar, Toolbar} from '@material-ui/core';
 import { Section, SectionAlternate,CustomContactForm } from 'components/organisms';
-import { Articles,Teaser, Features, Hero, CustomJobs, Newsletter } from './components';
+import { Articles,Teaser, Features, CustomJobs, Newsletter,Hero,OldTalentFeatures } from './components';
 
-import { aricles, features, jobs } from './data';
+import { aricles, features, oldTalentFeatures,jobs } from './data';
 import ForumIcon from "@material-ui/icons/Forum";
 import {makeStyles} from "@material-ui/core/styles";
 import MuiAlert from "@material-ui/lab/Alert";
@@ -108,6 +108,11 @@ const CustomCareerListingMinimal = () => {
   return (
     <div>
       <Hero/>
+      <div className={classes.featuresSection}>
+        <Section>
+          <OldTalentFeatures data={oldTalentFeatures} />
+        </Section>
+      </div>
       <Section>
         <Teaser/>
       </Section>
