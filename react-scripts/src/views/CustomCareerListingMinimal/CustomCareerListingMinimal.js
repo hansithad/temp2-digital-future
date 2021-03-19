@@ -47,6 +47,9 @@ const useStyles = makeStyles(theme => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     color: '#fff',
+  },
+  paddingTop:{
+    paddingTop: 0
   }
 }));
 
@@ -116,7 +119,7 @@ const CustomCareerListingMinimal = () => {
       <Section>
         <Teaser/>
       </Section>
-      <Section>
+      <Section className={classes.paddingTop}>
         <Articles data={aricles}/>
       </Section>
       <Features data={features}/>

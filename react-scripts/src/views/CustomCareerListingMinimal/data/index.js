@@ -138,7 +138,7 @@ export const jobs = [
 
 export const aricles = [
   {
-    title: 'Dedicated Recruitment',
+    title: 'Bespoke talent sourcing',
     subtitle:
       'Get talent suitable to your needs. Upon defining the candidate\'s profile we will either assign our expert or acquire new talent matching your requirements.',
   },

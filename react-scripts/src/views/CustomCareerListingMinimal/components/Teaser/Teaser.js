@@ -35,7 +35,7 @@ const Teaser = props => {
         >
           <div>
             <SectionHeader
-              title="Don't worry about talent."
+              title="Comprehensive Service Scope"
               subtitle="The world of Digital is complex. Aiming to support your journey at all stages of development we have established a comprehensive portfolio of HR solutions providing essential support in sourcing and placing the talent you need to help you execute the digital agenda."
               align="left"
               titleVariant="h3"
