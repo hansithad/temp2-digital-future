@@ -8,6 +8,7 @@ import { SectionHeader } from 'components/molecules';
 import { CardBase } from 'components/organisms';
 
 import teamBuild  from '../../../../assets/images/team_build.svg';
+import progressiveWebApp from '../../../../assets/images/progressive_app.svg';
 
 const useStyles = makeStyles(() => ({
   logo: {
@@ -48,7 +49,7 @@ const Integrations = props => {
             </Grid>
             <Grid item xs={12} md={6} data-aos="fade-up">
               <Image
-                src="https://assets.maccarianagency.com/the-front/illustrations/progressive-app.svg"
+                src={progressiveWebApp}
                 alt="Integrations"
               />
             </Grid>

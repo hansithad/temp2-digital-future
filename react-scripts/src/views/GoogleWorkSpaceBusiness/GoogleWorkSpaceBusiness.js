@@ -14,9 +14,7 @@ import {
   Advantages,
   Features,
   Integrations,
-  Reviews,
   Team,
-  VideoSection,
   MobileApp,
   Newsletter,
   CloudFeatures
@@ -25,7 +23,6 @@ import {
 import {
   partners,
   advantages,
-  reviews,
   integrations,
   customizations,
   mobileapp1,mobileapp2,

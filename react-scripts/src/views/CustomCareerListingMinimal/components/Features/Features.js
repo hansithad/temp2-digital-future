@@ -13,6 +13,9 @@ import {
 import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import { Section } from 'components/organisms';
+import whoIsForTeam  from './who-is-for-team.png'
+import whoIsForTeam2x  from './who-is-for-team@2x.png'
+import checkYellowImage  from '../../../../assets/images/check-icon-yellow.svg'
 
 const useStyles = makeStyles((theme) => ({
   grid: {
@@ -40,8 +43,8 @@ const Features = props => {
       <Grid container className={classes.grid}>
         <Grid item xs={12} md={6} data-aos="fade-up">
           <Image
-            src="https://assets.maccarianagency.com/the-front/photos/careers/team.png"
-            srcSet="https://assets.maccarianagency.com/the-front/photos/careers/team@2x.png 2x"
+            src={whoIsForTeam}
+            srcSet={whoIsForTeam2x}
           />
         </Grid>
         <Grid item container alignItems="center" xs={12} md={6}>
@@ -64,7 +67,7 @@ const Features = props => {
                 <ListItem disableGutters key={index} data-aos="fade-up">
                   <ListItemAvatar>
                     <Avatar
-                      src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
+                      src={checkYellowImage}
                       className={classes.checkBox}
                     />
                   </ListItemAvatar>

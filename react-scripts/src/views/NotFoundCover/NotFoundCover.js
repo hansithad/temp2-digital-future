@@ -5,6 +5,7 @@ import { Image } from 'components/atoms';
 import { LearnMoreLink } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import { HeroShaped } from 'components/organisms';
+import notFoundCover from './not-found-cover.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -77,7 +78,7 @@ const NotFoundCover = () => {
         }
         rightSide={
           <Image
-            src="https://assets.maccarianagency.com/the-front/photos/account/cover-3.png"
+            src={notFoundCover}
             className={classes.image}
             lazy={false}
           />

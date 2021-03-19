@@ -5,6 +5,7 @@ import { Grid, Button, Typography } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 import { CardBase } from 'components/organisms';
+import designTeam from './design-team.svg'
 
 const useStyles = makeStyles(theme => ({
   playIcon: {
@@ -47,7 +48,7 @@ const About = props => {
             <Grid item xs={12}>
               <Grid container justify="center">
                 <Image
-                  src="https://assets.maccarianagency.com/the-front/illustrations/design-team.svg"
+                  src={designTeam}
                   alt="Play Video"
                 />
               </Grid>

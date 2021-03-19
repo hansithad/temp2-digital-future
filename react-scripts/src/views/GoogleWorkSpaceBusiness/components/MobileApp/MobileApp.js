@@ -13,8 +13,9 @@ import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 
 import dashboardExtended  from './dashboard-extended.svg'
-import progressiveApp  from './progressive_app.svg'
+import progressiveApp  from '../../../../assets/images/progressive_app.svg';
 import monitor  from './monitor.svg'
+import checkYellowImage from '../../../../assets/images/check-icon-yellow.svg';
 
 
 const useStyles = makeStyles(() => ({
@@ -72,7 +73,7 @@ const MobileApp = props => {
                   <ListItem disableGutters>
                     <ListItemAvatar className={classes.listItemAvatar}>
                       <Avatar
-                        src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
+                        src={checkYellowImage}
                         className={classes.checkBox}
                       />
                     </ListItemAvatar>
@@ -107,7 +108,7 @@ const MobileApp = props => {
                   <ListItem disableGutters>
                     <ListItemAvatar className={classes.listItemAvatar}>
                       <Avatar
-                        src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
+                        src={checkYellowImage}
                         className={classes.checkBox}
                       />
                     </ListItemAvatar>

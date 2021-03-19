@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { Button, Typography } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { Section, HeroSimpleBackground } from 'components/organisms';
+import heroBanner from './hero-banner-bg.svg'
 
 const Hero = props => {
   const { className, ...rest } = props;
 
   return (
     <div className={className} {...rest}>
-      <HeroSimpleBackground backgroundImage="https://assets.maccarianagency.com/the-front/shapes/banner-bg.svg">
+      <HeroSimpleBackground backgroundImage={heroBanner}>
         <Section narrow>
           <SectionHeader
             title={

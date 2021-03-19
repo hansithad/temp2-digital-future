@@ -20,6 +20,10 @@ import {
 import { SectionHeader } from 'components/molecules';
 import { CardBase, DescriptionListIcon } from 'components/organisms';
 
+import bgShapeImage  from './bg-shapes.svg';
+import bgIconImage  from './bgicon.svg';
+import checkYellowImage  from '../../../../assets/images/check-icon-yellow.svg';
+
 const useStyles = makeStyles(theme => ({
   checkBox: {
     background: 'transparent',
@@ -34,7 +38,7 @@ const useStyles = makeStyles(theme => ({
   featureItems: {
     width: '100%',
     height: '100%',
-    background: 'url(https://assets.maccarianagency.com/the-front/illustrations/bg-shapes.svg) no-repeat top center',
+    background: `url(${bgShapeImage}) no-repeat top center`,
     backgroundSize: 'contain',
 
     [theme.breakpoints.up('md')]: {
@@ -47,7 +51,7 @@ const useStyles = makeStyles(theme => ({
   iconCover: {
     width: 60,
     height: 60,
-    background: 'url(https://assets.maccarianagency.com/the-front/illustrations/bgicon.svg) no-repeat center center',
+    background: `url(${bgIconImage}) no-repeat center center`,
     backgroundSize: 'contain',
     display: 'flex',
     justifyContent: 'center',
@@ -175,7 +179,7 @@ const CloudFeatures = props => {
                   <ListItem disableGutters>
                     <ListItemAvatar>
                       <Avatar
-                        src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
+                        src={checkYellowImage}
                         className={classes.checkBox}
                       />
                     </ListItemAvatar>
