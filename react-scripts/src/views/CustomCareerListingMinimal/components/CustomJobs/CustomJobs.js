@@ -18,7 +18,7 @@ const CustomJobs = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Some of the talent profiles we love to provide:"
+        title="Some of the talent profiles within our area of expertise:"
         subtitle={
           <>
             We specialize in providing talent for high-profile positions where a rare set of experience and knowledge is required, e.g.:

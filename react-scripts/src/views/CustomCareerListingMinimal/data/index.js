@@ -21,7 +21,7 @@ export const jobs = [
   {
     color: colors.blue[500],
     title: 'Digital Product Management',
-    jobTitle: 'Marketing Manage',
+    jobTitle: 'Marketing Manager',
     type: 'Full time',
     location: 'Rome, Italy',
     date: 'Just now',
@@ -42,7 +42,7 @@ export const jobs = [
   {
     color: colors.indigo[500],
     title: 'Data Strategy',
-    jobTitle: ' Business Analyst',
+    jobTitle: 'Business Analyst',
     type: 'Part time',
     location: 'Paris, France',
     date: '2 days ago',
@@ -52,7 +52,7 @@ export const jobs = [
   {
     color: colors.indigo[500],
     title: 'Data Strategy',
-    jobTitle: ' Business Analyst',
+    jobTitle: 'Data Analyst',
     type: 'Part time',
     location: 'Paris, France',
     date: '2 days ago',
@@ -126,7 +126,7 @@ export const jobs = [
   {
     color: colors.deepOrange[500],
     title: 'Technology',
-    jobTitle: 'Cloud Lead',
+    jobTitle: 'Cloud Migration Manager',
     type: 'Part Time',
     location: 'Paris, France',
     date: '5 days ago',
