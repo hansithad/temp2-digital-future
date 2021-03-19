@@ -29,9 +29,6 @@ const useStyles = makeStyles(theme => ({
 const NotFound = () => {
   const classes = useStyles();
 
-  const handleClick = () => {
-    window.history.back();
-  };
 
   return (
     <div>
@@ -42,12 +39,7 @@ const NotFound = () => {
             title="Uh oh."
             subtitle={
               <span>
-                There’s nothing here, but if you feel this is an error please{' '}
-                <LearnMoreLink
-                  title="let us know"
-                  href="#"
-                  typographyProps={{ variant: 'h6' }}
-                />
+                There’s nothing here.
               </span>
             }
             titleProps={{
@@ -63,7 +55,7 @@ const NotFound = () => {
                 size="large"
                 variant="contained"
                 color="primary"
-                onClick={handleClick}
+                href="/"
               >
                 Go Back
               </Button>,

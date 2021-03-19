@@ -5,6 +5,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Toolbar } from '@material-ui/core';
 import { Image } from 'components/atoms';
 
+import dfLogo  from '../../../../assets/images/digital_future_yellow.svg'
+import dfLogoDark  from '../../../../assets/images/digital_future_yellow_white.png'
+
 const useStyles = makeStyles(theme => ({
   toolbar: {
     maxWidth: theme.layout.contentWidth,
@@ -24,10 +27,34 @@ const useStyles = makeStyles(theme => ({
     },
   },
   logoImage: {
-    width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 100,
+      height: '100%',
+    },
+    [theme.breakpoints.down('md')]: {
+      maxWidth: 150,
+      height: '100%',
+    },
+    objectFit: 'cover',
+    width: '240px',
+    height: '100%',
+  },
+  darkLogoImage: {
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 100,
+      height: '100%',
+    },
+    [theme.breakpoints.down('md')]: {
+      maxWidth: 150,
+      height: '100%',
+    },
+    objectFit: 'cover',
+    width: '240px',
     height: '100%',
   },
 }));
+
+
 
 const Topbar = ({ themeMode, className, ...rest }) => {
   const classes = useStyles();
@@ -35,11 +62,11 @@ const Topbar = ({ themeMode, className, ...rest }) => {
   return (
     <Toolbar className={clsx(classes.toolbar, className)} {...rest}>
       <div className={classes.logoContainer}>
-        <a href="/" title="thefront">
+        <a href="/" title="Digital Future">
           <Image
-            className={classes.logoImage}
-            src={themeMode === 'light' ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg' : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'}
-            alt="thefront"
+            className={themeMode==='light'? classes.logoImage: classes.darkLogoImage}
+            src={themeMode==='light'?dfLogo:dfLogoDark}
+            alt="Digital Future"
             lazy={false}
           />
         </a>

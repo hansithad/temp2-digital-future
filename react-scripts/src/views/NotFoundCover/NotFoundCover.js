@@ -40,10 +40,6 @@ const useStyles = makeStyles(theme => ({
 const NotFoundCover = () => {
   const classes = useStyles();
 
-  const handleClick = () => {
-    window.history.back();
-  };
-
   return (
     <div className={classes.root}>
       <HeroShaped
@@ -54,12 +50,7 @@ const NotFoundCover = () => {
               title="Uh oh."
               subtitle={
                 <span>
-                  There’s nothing here, but if you feel this is an error please{' '}
-                  <LearnMoreLink
-                    title="let us know"
-                    href="#"
-                    typographyProps={{ variant: 'h6' }}
-                  />
+                  There’s nothing here.
                 </span>
               }
               titleProps={{
@@ -75,9 +66,9 @@ const NotFoundCover = () => {
                   size="large"
                   variant="contained"
                   color="primary"
-                  onClick={handleClick}
+                  href="/"
                 >
-                  Go Back
+                  Go to Home Page
                 </Button>,
               ]}
               disableGutter
