@@ -141,7 +141,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
           groupTitle: 'Digital Talent',
           pages: [
             {
-              title: 'Dedicated Requirement',
+              title: 'Talent Sourcing',
               href: '/talent-augmentation',
             },
             {

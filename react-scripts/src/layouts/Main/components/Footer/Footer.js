@@ -178,6 +178,22 @@ const Footer = props => {
                 Contact
               </Typography>
             </ListItem>
+            <ListItem disableGutters key={1} className={classes.menuGroupItem}>
+              <Typography
+                variant="body2"
+                className={clsx(classes.navLink, 'submenu-item')}
+              >
+                +971581043475
+              </Typography>
+            </ListItem>
+            <ListItem disableGutters key={2} className={classes.menuGroupItem}>
+              <Typography
+                variant="body2"
+                className={clsx(classes.navLink, 'submenu-item')}
+              >
+                hello@digital-future.me
+              </Typography>
+            </ListItem>
           </List>
         </div>
         <div>
