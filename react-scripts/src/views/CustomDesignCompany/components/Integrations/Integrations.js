@@ -29,33 +29,6 @@ const Integrations = props => {
     <div className={className} {...rest}>
       <Grid container spacing={isMd ? 4 : 2}>
         <Grid item xs={12}>
-          <Grid container spacing={isMd ? 4 : 2}>
-            <Grid item xs={12} md={6}>
-              <SectionHeader
-                title="Digital Strategy & Implementation"
-                subtitle="Our digital transformation consulting services start with detailed examination of your existing digital technology to identify specific areas for improvement. We look to eliminate data silos, reduce the time to insights for your employees, implement online, cloud-based and scalable solutions for your IT, operations, sales, marketing."
-                align="left"
-                label="DIGITAL TRANSFORMATION"
-                ctaGroup={[
-                  <LearnMoreLink
-                    title="Learn More"
-                    href="/digital-transformation"
-                    variant="h6"
-                  />,
-                ]}
-                disableGutter
-                data-aos="fade-up"
-              />
-            </Grid>
-            <Grid item xs={12} md={6} data-aos="fade-up">
-              <Image
-                src={progressiveWebApp}
-                alt="Integrations"
-              />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12}>
           <Grid
             container
             spacing={isMd ? 4 : 2}

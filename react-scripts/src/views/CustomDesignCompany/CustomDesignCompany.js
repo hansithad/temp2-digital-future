@@ -22,10 +22,11 @@ import {
   Features,
   Hero,
   Integrations,
-  Newsletter
+  Newsletter,
+  MobileApp
 } from './components';
 
-import { integrations } from './data';
+import { integrations,mobileapp1, mobileapp2 } from './data';
 import ForumIcon from "@material-ui/icons/Forum";
 import {postData ,BASE_URL } from '../../service/request'
 import * as colors from "@material-ui/core/colors";
@@ -198,6 +199,10 @@ const CustomDesignCompany = ({ themeMode }) => {
       <SectionAlternate className={classes.sectionAlternate}>
         <About />
       </SectionAlternate>
+      <Section style={{paddingTop:0}}>
+        <MobileApp imageUrl='monitor' imageSide='right' data={mobileapp1} />
+        <MobileApp imageUrl='progressiveApp' imageSide='left' data={mobileapp2} />
+      </Section>
       <Section>
         <Integrations data={integrations} />
       </Section>
