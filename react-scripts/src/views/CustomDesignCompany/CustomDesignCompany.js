@@ -93,6 +93,9 @@ const useStyles = makeStyles(theme => ({
     border: `2px solid ${colors.blueGrey[50]}`,
     maxWidth: 300,
   },
+  paddingTop:{
+    paddingTop:0
+  }
 }));
 
 function Alert(props) {
@@ -203,7 +206,7 @@ const CustomDesignCompany = ({ themeMode }) => {
         <MobileApp imageUrl='monitor' imageSide='right' data={mobileapp1} />
         <MobileApp imageUrl='progressiveApp' imageSide='left' data={mobileapp2} />
       </Section>
-      <Section>
+      <Section className={classes.paddingTop}>
         <Integrations data={integrations} />
       </Section>
       <SectionAlternate innerNarrowed>
