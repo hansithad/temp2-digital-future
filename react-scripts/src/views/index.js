@@ -1,3 +1,5 @@
+import GoogleWorkSpaceBusinessOriginal from "./GoogleWorkSpaceBusinessOriginal/GoogleWorkSpaceBusinessOriginal";
+
 export { default as Home } from './Home';
 export { default as IndexView } from './IndexView';
 export { default as Agency } from './Agency';
@@ -12,6 +14,7 @@ export { default as Elearning } from './Elearning';
 export { default as Enterprise } from './Enterprise';
 export { default as Service } from './Service';
 export { default as GoogleWorkSpaceBusiness } from './GoogleWorkSpaceBusiness';
+export { default as GoogleWorkSpaceBusinessOriginal } from './GoogleWorkSpaceBusinessOriginal';
 export { default as StaffAugmentation } from './StaffAugmentation';
 export { default as WebBasic } from './WebBasic';
 export { default as DesktopApp } from './DesktopApp';

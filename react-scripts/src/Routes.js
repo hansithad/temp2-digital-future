@@ -23,6 +23,7 @@ import {
   Enterprise as EnterpriseView,
   Service as ServiceView,
   GoogleWorkSpaceBusiness as GoogleWorkSpaceBusinessView,
+  GoogleWorkSpaceBusinessOriginal as GoogleWorkSpaceBusinessOriginalView,
   StaffAugmentation as StaffAugmentation,
   WebBasic as WebBasicView,
   DesktopApp as DesktopAppView,
@@ -189,15 +190,27 @@ const Routes = () => {
       {/*/>*/}
       <Route
         exact
-        path="/digital-transformation"
+        path="/google-workspace-business"
         render={matchProps => (
           <WithLayout
             {...matchProps}
-            component={GoogleWorkSpaceBusinessView}
+            component={GoogleWorkSpaceBusinessOriginalView}
             layout={MainLayout}
           />
         )}
       />
+
+      {/*<Route*/}
+        {/*exact*/}
+        {/*path="/digital-transformation"*/}
+        {/*render={matchProps => (*/}
+          {/*<WithLayout*/}
+            {/*{...matchProps}*/}
+            {/*component={GoogleWorkSpaceBusinessView}*/}
+            {/*layout={MainLayout}*/}
+          {/*/>*/}
+        {/*)}*/}
+      {/*/>*/}
       <Route
         exact
         path="/talent-augmentation"

@@ -169,6 +169,15 @@ const SidebarNav = props => {
         </Typography>
       </ListItem>
       <ListItem className={classes.listItem}>
+        <Typography variant="h6" color="textPrimary" gutterBottom>
+          Cloud Product
+        </Typography>
+        <CloudProductPages />
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Divider className={classes.divider} />
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <Typography
           variant="body2"
           component={'a'}
