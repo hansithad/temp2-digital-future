@@ -1,8 +1,21 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {AppBar, Divider, Drawer, IconButton, Toolbar,Snackbar,Backdrop, CircularProgress } from '@material-ui/core';
-import { Section, SectionAlternate, CustomContactForm } from 'components/organisms';
+import {
+  AppBar,
+  Divider,
+  Drawer,
+  IconButton,
+  Toolbar,
+  Snackbar,
+  Backdrop,
+  CircularProgress,
+  Grid, Typography, useMediaQuery, useTheme
+} from '@material-ui/core';
+import { Section, SectionAlternate, CustomContactForm,CardBase } from 'components/organisms';
+import { SectionHeader } from 'components/molecules';
 import MuiAlert from '@material-ui/lab/Alert';
+import { Image } from 'components/atoms';
+import gcPartnerImage from '../../assets/images/GC-Partner-no_outline-V.png';
 
 import {
   About,
@@ -79,8 +92,12 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const CustomDesignCompany = () => {
+const CustomDesignCompany = ({ themeMode }) => {
+  const theme = useTheme();
   const classes = useStyles();
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
 
   const [openBottombar, setOpenBottombar] = React.useState(false);
   const [openSnack, setOpenSnack] = React.useState(false);
@@ -132,6 +149,46 @@ const CustomDesignCompany = () => {
   return (
     <div>
       <Hero data-aos="fade-up" className={classes.hero} />
+      <Section narrow>
+        <Grid container spacing={isMd ? 4 : 2}>
+          <Grid item xs={12} sm={6} data-aos="fade-up">
+            <Grid container alignItems="flex-start" justify="center">
+              <CardBase className={classes.cardBase} withShadow liftUp>
+                <>
+                  <Image
+                    src={gcPartnerImage}
+                    alt="..."
+                    lazy={false}
+                  />
+
+                  <Divider className={classes.divider} />
+                </>
+              </CardBase>
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            container
+            alignItems="center"
+            xs={12}
+            sm={6}
+            data-aos="fade-up"
+          >
+            <SectionHeader
+              title={
+                <span>
+                  <Typography color="secondary" variant="inherit" component="span">Certified Partner</Typography> for implementing Google Cloud
+                </span>
+              }
+              subtitle="High profile individual and company qualifications issued by Google confirm our implementation capabilities."
+              align={isMd ? 'left' : 'center'}
+              disableGutter
+              titleVariant="h5"
+              subtitleVariant="subtitle1"
+            />
+          </Grid>
+        </Grid>
+      </Section>
       <SectionAlternate className={classes.sectionAlternate}>
         <About />
       </SectionAlternate>
