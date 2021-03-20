@@ -28,6 +28,7 @@ import {
 import { integrations } from './data';
 import ForumIcon from "@material-ui/icons/Forum";
 import {postData ,BASE_URL } from '../../service/request'
+import * as colors from "@material-ui/core/colors";
 
 const useStyles = makeStyles(theme => ({
   hero: {
@@ -85,7 +86,12 @@ const useStyles = makeStyles(theme => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     color: '#fff',
-  }
+  },
+  cardBase: {
+    borderRadius: '35px',
+    border: `2px solid ${colors.blueGrey[50]}`,
+    maxWidth: 300,
+  },
 }));
 
 function Alert(props) {
