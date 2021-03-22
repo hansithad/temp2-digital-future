@@ -169,12 +169,6 @@ const CloudDataWareHouse = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <Pricings data={pricings} handleBottombarOpen={handleBottombarOpen} />
-      </Section>
-      <Section style={{paddingTop:0}}>
-        <Divider />
-      </Section>
-      <Section style={{paddingTop:0}}>
         <CloudFeatures data={cloudFeatures} handleBottombarOpen={handleBottombarOpen} />
       </Section>
       <Divider />
