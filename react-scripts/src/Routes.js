@@ -24,6 +24,7 @@ import {
   Service as ServiceView,
   GoogleWorkSpaceBusiness as GoogleWorkSpaceBusinessView,
   GoogleWorkSpaceBusinessOriginal as GoogleWorkSpaceBusinessOriginalView,
+  CloudDataWareHouse as CloudDataWareHouseView,
   StaffAugmentation as StaffAugmentation,
   WebBasic as WebBasicView,
   DesktopApp as DesktopAppView,
@@ -195,6 +196,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={GoogleWorkSpaceBusinessOriginalView}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/cloud-data-warehouse"
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={CloudDataWareHouseView}
             layout={MainLayout}
           />
         )}

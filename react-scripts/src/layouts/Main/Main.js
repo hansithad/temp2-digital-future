@@ -31,10 +31,10 @@ const Main = ({ children, themeToggler, themeMode }) => {
                         title: 'Google Workspace Business',
                         href: '/google-workspace-business',
                     },
-                    // {
-                    //     title: 'Google Workspace Enterprise',
-                    //     href: '/rental',
-                    // },
+                    {
+                        title: 'Cloud Data Warehouse (BigQuery)',
+                        href: '/cloud-data-warehouse',
+                    }
                     // {
                     //     title: 'Chrome Enterprise',
                     //     href: '/job-listing',

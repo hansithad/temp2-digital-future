@@ -15,6 +15,7 @@ export { default as Enterprise } from './Enterprise';
 export { default as Service } from './Service';
 export { default as GoogleWorkSpaceBusiness } from './GoogleWorkSpaceBusiness';
 export { default as GoogleWorkSpaceBusinessOriginal } from './GoogleWorkSpaceBusinessOriginal';
+export { default as CloudDataWareHouse } from './CloudDataWareHouse';
 export { default as StaffAugmentation } from './StaffAugmentation';
 export { default as WebBasic } from './WebBasic';
 export { default as DesktopApp } from './DesktopApp';
