@@ -5,7 +5,7 @@ import {
   Toolbar,
   IconButton,
   Divider,
-  Drawer, Grid, Typography, useMediaQuery, useTheme,
+  Drawer, Grid, Typography, useMediaQuery, useTheme, Snackbar, Backdrop, CircularProgress,
 } from '@material-ui/core';
 import ForumIcon from '@material-ui/icons/Forum';
 import { Section, ContactForm, SectionAlternate,CardBase } from 'components/organisms';
@@ -37,6 +37,13 @@ import {
 } from './data';
 import gcPartnerImage from "../../assets/images/GC-Partner-no_outline-V.png";
 import * as colors from "@material-ui/core/colors";
+import {Newsletter} from "../CustomCareerListingMinimal/components";
+import {BASE_URL, postData} from "../../service/request";
+import MuiAlert from "@material-ui/lab/Alert";
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
@@ -83,7 +90,11 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '35px',
     border: `2px solid ${colors.blueGrey[50]}`,
     maxWidth: 300,
-  }
+  },
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    color: '#fff',
+  },
 }));
 
 const CloudDataWareHouse = () => {
@@ -94,6 +105,8 @@ const CloudDataWareHouse = () => {
   });
 
   const [openBottombar, setOpenBottombar] = React.useState(false);
+  const [openSnack, setOpenSnack] = React.useState(false);
+  const [openLoader, setOpenLoader] = React.useState(false);
 
   const handleBottombarOpen = () => {
     setOpenBottombar(true);
@@ -101,6 +114,29 @@ const CloudDataWareHouse = () => {
 
   const handleBottombarClose = () => {
     setOpenBottombar(false);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpenSnack(false);
+  };
+
+  const newsletterSubmission = (formValues,callback)=>{
+
+    setOpenLoader(true);
+
+    //ADDING message
+    formValues['message'] = '####NewsLetter request#####';
+
+    postData(BASE_URL,formValues)
+      .then(data => {
+        callback();
+        setOpenLoader(false);
+        setOpenSnack(true);
+      });
   };
 
   return (
@@ -171,7 +207,12 @@ const CloudDataWareHouse = () => {
       <Section style={{paddingTop:0}}>
         <CloudFeatures data={cloudFeatures} handleBottombarOpen={handleBottombarOpen} />
       </Section>
-      <Divider />
+      <Section style={{paddingTop:0}}>
+        <Divider />
+      </Section>
+      <Section style={{paddingTop:0}}>
+        <Newsletter postSubmission={newsletterSubmission}/>
+      </Section>
       <AppBar position="fixed" className={classes.appBarBottom}>
         <Toolbar disableGutters className={classes.toolbarBottom}>
           <IconButton
@@ -191,6 +232,14 @@ const CloudDataWareHouse = () => {
           </Drawer>
         </Toolbar>
       </AppBar>
+      <Snackbar open={openSnack} autoHideDuration={2000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Thank you for contacting us. We will reply shortly
+        </Alert>
+      </Snackbar>
+      <Backdrop className={classes.backdrop} open={openLoader} >
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </div>
   );
 };
