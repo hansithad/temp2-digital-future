@@ -138,15 +138,13 @@ const GoogleWorkSpaceBusinessOriginal = () => {
   return (
     <div className={classes.root}>
       <Section className={classes.pagePaddingTop}>
-        <>
         <About data={partners} handleBottombarOpen={handleBottombarOpen}
                reference={el1}
                priceClick={()=> scrollToDiv(el3)}
                click={()=> scrollToDiv(el2)} />
-        <Section style={{paddingTop:20}}>
-          <Divider />
-        </Section>
-        </>
+      </Section>
+      <Section style={{paddingTop:0}}>
+        <Divider />
       </Section>
       <Section style={{paddingTop:20}} narrow>
         <Grid container spacing={isMd ? 4 : 2}>
@@ -188,13 +186,13 @@ const GoogleWorkSpaceBusinessOriginal = () => {
           </Grid>
         </Grid>
       </Section>
-      <Section style={{paddingTop:20}}>
+      <Section style={{paddingTop:0}}>
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
         <Pricings data={pricings} handleBottombarOpen={handleBottombarOpen} reference={el3} />
       </Section>
-      <Section style={{paddingTop:20}}>
+      <Section style={{paddingTop:0}}>
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
