@@ -28,11 +28,8 @@ const Pricings = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Simple pricing"
-        subtitle="A pay-once license, just for you."
-        ctaGroup={[
-          <LearnMoreLink title="See what's included" href="#" variant="h6" />,
-        ]}
+        title="Simple and Attractive Pricing"
+        subtitle="For companies above 5 people we offer attractive pricing model"
         data-aos="fade-up"
       />
       <Grid container spacing={isMd ? 4 : 2}>
