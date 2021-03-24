@@ -5,18 +5,14 @@ import {
   Toolbar,
   IconButton,
   Divider,
-  Drawer, Snackbar, Backdrop, CircularProgress,
+  Drawer, Snackbar, Backdrop, CircularProgress, Grid, Typography, useMediaQuery, useTheme,
 } from '@material-ui/core';
 import ForumIcon from '@material-ui/icons/Forum';
-import { Section, CustomContactForm, SectionAlternate } from 'components/organisms';
+import { Section, CustomContactForm, SectionAlternate,CardBase } from 'components/organisms';
+import { SectionHeader } from 'components/molecules';
 import {
   About,
-  Advantages,
   Features,
-  Integrations,
-  Reviews,
-  Team,
-  VideoSection,
   MobileFeatures,
   Pricings,
   CloudFeatures
@@ -36,6 +32,9 @@ import {
 import {features} from "../CloudHosting/data";
 import {BASE_URL, postData} from "../../service/request";
 import MuiAlert from "@material-ui/lab/Alert";
+import { Image } from 'components/atoms';
+import gcPartnerImage from "../../assets/images/GC-Partner-no_outline-V.png";
+import * as colors from "@material-ui/core/colors";
 
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
@@ -81,6 +80,11 @@ const useStyles = makeStyles(theme => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     color: '#fff',
+  },
+  cardBase: {
+    borderRadius: '35px',
+    border: `2px solid ${colors.blueGrey[50]}`,
+    maxWidth: 300,
   }
 }));
 
@@ -90,6 +94,10 @@ function Alert(props) {
 
 const GoogleWorkSpaceBusinessOriginal = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
 
   const scrollToDiv = (ref) => window.scrollTo(0, ref.current.offsetTop);
   const el1 = useRef();
@@ -131,25 +139,68 @@ const GoogleWorkSpaceBusinessOriginal = () => {
       <Section className={classes.pagePaddingTop}>
         <>
         <About data={partners} handleBottombarOpen={handleBottombarOpen} reference={el1} click={()=> scrollToDiv(el2)} />
-        <Section>
+        <Section style={{paddingTop:20}}>
           <Divider />
         </Section>
-        <Features data={customizations} handleBottombarOpen={handleBottombarOpen} />
-
-        {/*<Team data={team} />*/}
         </>
+      </Section>
+      <Section style={{paddingTop:20}} narrow>
+        <Grid container spacing={isMd ? 4 : 2}>
+          <Grid item xs={12} sm={6} data-aos="fade-up">
+            <Grid container alignItems="flex-start" justify="center">
+              <CardBase className={classes.cardBase} withShadow liftUp>
+                <>
+                  <Image
+                    src={gcPartnerImage}
+                    alt="..."
+                    lazy={false}
+                  />
+
+                  <Divider className={classes.divider} />
+                </>
+              </CardBase>
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            container
+            alignItems="center"
+            xs={12}
+            sm={6}
+            data-aos="fade-up"
+          >
+            <SectionHeader
+              title={
+                <span>
+                  <Typography color="secondary" variant="inherit" component="span">Certified Partner</Typography> for implementing Google Workspace (G Suite)
+                </span>
+              }
+              subtitle="High profile individual and company certifications issued by Google confirm our implementation capabilities."
+              align={isMd ? 'left' : 'center'}
+              disableGutter
+              titleVariant="h5"
+              subtitleVariant="subtitle1"
+            />
+          </Grid>
+        </Grid>
       </Section>
       <Section style={{paddingTop:20}}>
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <MobileFeatures data={mobileFeatures} reference={el2} />
+        <Pricings data={pricings} handleBottombarOpen={handleBottombarOpen} />
+      </Section>
+      <Section style={{paddingTop:20}}>
+        <Divider />
+      </Section>
+      <Section style={{paddingTop:0}}>
+        <Features data={customizations} handleBottombarOpen={handleBottombarOpen} />
       </Section>
       <Section style={{paddingTop:0}}>
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <Pricings data={pricings} handleBottombarOpen={handleBottombarOpen} />
+        <MobileFeatures data={mobileFeatures} reference={el2} />
       </Section>
       <Section style={{paddingTop:0}}>
         <Divider />
