@@ -8,7 +8,7 @@ import {
   Drawer, Grid, Typography, useMediaQuery, useTheme, Snackbar, Backdrop, CircularProgress,
 } from '@material-ui/core';
 import ForumIcon from '@material-ui/icons/Forum';
-import { Section, ContactForm, SectionAlternate,CardBase } from 'components/organisms';
+import { Section, CustomContactForm, SectionAlternate,CardBase } from 'components/organisms';
 import { SectionHeader } from 'components/molecules';
 import { Image } from 'components/atoms';
 import {
@@ -124,6 +124,17 @@ const CloudDataWareHouse = () => {
     setOpenSnack(false);
   };
 
+  const postSubmission = (formValues)=>{
+
+    setOpenLoader(true);
+    handleBottombarClose();
+    postData(BASE_URL,formValues)
+      .then(data => {
+        setOpenLoader(false);
+        setOpenSnack(true);
+      });
+  };
+
   const newsletterSubmission = (formValues,callback)=>{
 
     setOpenLoader(true);
@@ -227,7 +238,7 @@ const CloudDataWareHouse = () => {
             onClose={handleBottombarClose}
           >
             <div className={classes.contactForm}>
-              <ContactForm />
+              <CustomContactForm postSubmission={postSubmission} />
             </div>
           </Drawer>
         </Toolbar>

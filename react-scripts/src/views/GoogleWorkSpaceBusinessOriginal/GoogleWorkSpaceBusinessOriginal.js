@@ -5,10 +5,10 @@ import {
   Toolbar,
   IconButton,
   Divider,
-  Drawer,
+  Drawer, Snackbar, Backdrop, CircularProgress,
 } from '@material-ui/core';
 import ForumIcon from '@material-ui/icons/Forum';
-import { Section, ContactForm, SectionAlternate } from 'components/organisms';
+import { Section, CustomContactForm, SectionAlternate } from 'components/organisms';
 import {
   About,
   Advantages,
@@ -34,6 +34,8 @@ import {
   cloudFeatures
 } from './data';
 import {features} from "../CloudHosting/data";
+import {BASE_URL, postData} from "../../service/request";
+import MuiAlert from "@material-ui/lab/Alert";
 
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
@@ -76,12 +78,22 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 800,
     margin: '0 auto',
   },
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    color: '#fff',
+  }
 }));
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 const GoogleWorkSpaceBusinessOriginal = () => {
   const classes = useStyles();
 
   const [openBottombar, setOpenBottombar] = React.useState(false);
+  const [openSnack, setOpenSnack] = React.useState(false);
+  const [openLoader, setOpenLoader] = React.useState(false);
 
   const handleBottombarOpen = () => {
     setOpenBottombar(true);
@@ -89,6 +101,25 @@ const GoogleWorkSpaceBusinessOriginal = () => {
 
   const handleBottombarClose = () => {
     setOpenBottombar(false);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpenSnack(false);
+  };
+
+  const postSubmission = (formValues)=>{
+
+    setOpenLoader(true);
+    handleBottombarClose();
+    postData(BASE_URL,formValues)
+      .then(data => {
+        setOpenLoader(false);
+        setOpenSnack(true);
+      });
   };
 
   return (
@@ -137,11 +168,19 @@ const GoogleWorkSpaceBusinessOriginal = () => {
             onClose={handleBottombarClose}
           >
             <div className={classes.contactForm}>
-              <ContactForm />
+              <CustomContactForm postSubmission={postSubmission} />
             </div>
           </Drawer>
         </Toolbar>
       </AppBar>
+      <Snackbar open={openSnack} autoHideDuration={2000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Thank you for contacting us. We will reply shortly
+        </Alert>
+      </Snackbar>
+      <Backdrop className={classes.backdrop} open={openLoader} >
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </div>
   );
 };
