@@ -170,24 +170,12 @@ const SidebarNav = props => {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Typography variant="h6" color="textPrimary" gutterBottom>
-          Cloud Product
+          Cloud Products
         </Typography>
         <CloudProductPages />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Divider className={classes.divider} />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Typography
-          variant="body2"
-          component={'a'}
-          href='/digital-transformation'
-          className={clsx(classes.navLink, 'submenu-item')}
-          color="textPrimary"
-          onClick={() => onClose()}
-        >
-          Digital Transformation
-        </Typography>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Typography
