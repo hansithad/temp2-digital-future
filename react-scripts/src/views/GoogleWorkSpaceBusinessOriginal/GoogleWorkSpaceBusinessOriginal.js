@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useRef}from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
@@ -91,6 +91,10 @@ function Alert(props) {
 const GoogleWorkSpaceBusinessOriginal = () => {
   const classes = useStyles();
 
+  const scrollToDiv = (ref) => window.scrollTo(0, ref.current.offsetTop);
+  const el1 = useRef();
+  const el2 = useRef();
+
   const [openBottombar, setOpenBottombar] = React.useState(false);
   const [openSnack, setOpenSnack] = React.useState(false);
   const [openLoader, setOpenLoader] = React.useState(false);
@@ -126,7 +130,7 @@ const GoogleWorkSpaceBusinessOriginal = () => {
     <div className={classes.root}>
       <Section className={classes.pagePaddingTop}>
         <>
-        <About data={partners} handleBottombarOpen={handleBottombarOpen} />
+        <About data={partners} handleBottombarOpen={handleBottombarOpen} reference={el1} click={()=> scrollToDiv(el2)} />
         <Section>
           <Divider />
         </Section>
@@ -139,7 +143,7 @@ const GoogleWorkSpaceBusinessOriginal = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <MobileFeatures data={mobileFeatures} />
+        <MobileFeatures data={mobileFeatures} reference={el2} />
       </Section>
       <Section style={{paddingTop:0}}>
         <Divider />

@@ -109,7 +109,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const MobileFeatures = props => {
-  const { data, className, ...rest } = props;
+  const { data, reference,className, ...rest } = props;
   const classes = useStyles();
 
   const logoObject = {
@@ -128,7 +128,7 @@ const MobileFeatures = props => {
   const { items, officeItems, storeItems, itItems, adminItems } = data;
 
   return (
-    <div className={className} {...rest}>
+    <div ref={reference} className={className} {...rest}>
       <SectionHeader
         title={
           <span>

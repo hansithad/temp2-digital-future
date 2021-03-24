@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const About = props => {
-  const { data, className, handleBottombarOpen,...rest } = props;
+  const { data, reference,click,className, handleBottombarOpen,...rest } = props;
   const classes = useStyles();
 
   const theme = useTheme();
@@ -24,7 +24,7 @@ const About = props => {
   });
 
   return (
-    <div className={className} data-aos="fade-up" {...rest}>
+    <div ref={reference} className={className} data-aos="fade-up" {...rest}>
       <Grid container justify="space-between" spacing={isMd ? 4 : 0}>
         <Grid item xs={12} md={6} data-aos={'fade-up'}>
           <Grid container spacing={2} alignItems="flex-start">
@@ -54,6 +54,7 @@ const About = props => {
                     variant="outlined"
                     color="primary"
                     size={isMd ? 'large' : 'medium'}
+                    onClick={click}
                   >
                       SEE WORKSPACE APPS
                   </Button>,
