@@ -102,6 +102,7 @@ const GoogleWorkSpaceBusinessOriginal = () => {
   const scrollToDiv = (ref) => window.scrollTo(0, ref.current.offsetTop);
   const el1 = useRef();
   const el2 = useRef();
+  const el3 = useRef();
 
   const [openBottombar, setOpenBottombar] = React.useState(false);
   const [openSnack, setOpenSnack] = React.useState(false);
@@ -138,7 +139,10 @@ const GoogleWorkSpaceBusinessOriginal = () => {
     <div className={classes.root}>
       <Section className={classes.pagePaddingTop}>
         <>
-        <About data={partners} handleBottombarOpen={handleBottombarOpen} reference={el1} click={()=> scrollToDiv(el2)} />
+        <About data={partners} handleBottombarOpen={handleBottombarOpen}
+               reference={el1}
+               priceClick={()=> scrollToDiv(el3)}
+               click={()=> scrollToDiv(el2)} />
         <Section style={{paddingTop:20}}>
           <Divider />
         </Section>
@@ -188,7 +192,7 @@ const GoogleWorkSpaceBusinessOriginal = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <Pricings data={pricings} handleBottombarOpen={handleBottombarOpen} />
+        <Pricings data={pricings} handleBottombarOpen={handleBottombarOpen} reference={el3} />
       </Section>
       <Section style={{paddingTop:20}}>
         <Divider />

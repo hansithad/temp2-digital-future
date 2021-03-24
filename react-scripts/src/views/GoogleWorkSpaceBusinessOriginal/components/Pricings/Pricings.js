@@ -7,7 +7,7 @@ import { SectionHeader } from 'components/molecules';
 import { CardPricingStandard,CardPricingCustom } from 'components/organisms';
 
 const Pricings = props => {
-  const { data, className,handleBottombarOpen, ...rest } = props;
+  const { data, className,reference,handleBottombarOpen, ...rest } = props;
 
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -26,7 +26,7 @@ const Pricings = props => {
   const classes = useStyles();
 
   return (
-    <div className={className} {...rest}>
+    <div ref={reference} className={className} {...rest}>
       <SectionHeader
         title="Simple and Attractive Pricing"
         subtitle="For companies above 5 people we offer attractive pricing model"
