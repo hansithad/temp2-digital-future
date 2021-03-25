@@ -15,14 +15,12 @@ import {
   Features,
   MobileFeatures,
   Pricings,
-  CloudFeatures
+  CloudFeatures,
+  Booking
 } from './components';
 
 import {
   partners,
-  advantages,
-  reviews,
-  integrations,
   customizations,
   team,
   mobileFeatures,
@@ -217,6 +215,13 @@ const GoogleWorkSpaceBusinessOriginal = () => {
       <Section style={{paddingTop:0}}>
         <CloudFeatures data={cloudFeatures} handleBottombarOpen={handleBottombarOpen} />
       </Section>
+      <Section style={{paddingTop:0}}>
+        <Divider />
+      </Section>
+      <Section style={{paddingTop:0}}>
+        <Booking />
+      </Section>
+
       <Divider />
       <AppBar position="fixed" className={classes.appBarBottom}>
         <Toolbar disableGutters className={classes.toolbarBottom}>

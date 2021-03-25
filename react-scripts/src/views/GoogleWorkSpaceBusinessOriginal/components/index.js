@@ -8,3 +8,4 @@ export { default as VideoSection } from './VideoSection';
 export { default as MobileFeatures } from './MobileFeatures';
 export { default as Pricings } from './Pricings';
 export { default as CloudFeatures } from './CloudFeatures';
+export { default as Booking } from './Booking';
