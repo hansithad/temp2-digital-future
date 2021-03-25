@@ -7,7 +7,7 @@ import { SectionHeader } from 'components/molecules';
 import { CardPricingStandard,CardPricingCustom } from 'components/organisms';
 
 const Pricings = props => {
-  const { data, className,reference,handleBottombarOpen, ...rest } = props;
+  const { data, className,reference,handleFreeTrialBottombarOpen, ...rest } = props;
 
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -89,7 +89,7 @@ const Pricings = props => {
                   fullWidth
                   size="large"
                   style={{textTransform: 'none'}}
-                  onClick={handleBottombarOpen}
+                  onClick={handleFreeTrialBottombarOpen}
 
                 >
                   Free Trial

@@ -25,3 +25,4 @@ export { default as CardPricingCustom } from './CardPricingCustom';
 export { default as Parallax } from './Parallax';
 export { default as ContactForm } from './ContactForm';
 export { default as CustomContactForm } from './CustomContactForm';
+export { default as FreeTrialForm } from './FreeTrialForm';

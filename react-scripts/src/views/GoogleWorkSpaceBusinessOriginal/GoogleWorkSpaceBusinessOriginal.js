@@ -8,7 +8,7 @@ import {
   Drawer, Snackbar, Backdrop, CircularProgress, Grid, Typography, useMediaQuery, useTheme,
 } from '@material-ui/core';
 import ForumIcon from '@material-ui/icons/Forum';
-import { Section, CustomContactForm, SectionAlternate,CardBase } from 'components/organisms';
+import { Section, CustomContactForm, FreeTrialForm,SectionAlternate,CardBase } from 'components/organisms';
 import { SectionHeader } from 'components/molecules';
 import {
   About,
@@ -105,15 +105,22 @@ const GoogleWorkSpaceBusinessOriginal = () => {
   const el3 = useRef();
 
   const [openBottombar, setOpenBottombar] = React.useState(false);
+  const [openFreeTrialBottombar, setOpenFreeTrialBottombar] = React.useState(false);
   const [openSnack, setOpenSnack] = React.useState(false);
   const [openLoader, setOpenLoader] = React.useState(false);
 
   const handleBottombarOpen = () => {
     setOpenBottombar(true);
   };
+  const handleFreeTrialBottombarOpen = () => {
+    setOpenFreeTrialBottombar(true);
+  };
 
   const handleBottombarClose = () => {
     setOpenBottombar(false);
+  };
+  const handleFreeTrialBottombarClose = () => {
+    setOpenFreeTrialBottombar(false);
   };
 
   const handleClose = (event, reason) => {
@@ -127,7 +134,7 @@ const GoogleWorkSpaceBusinessOriginal = () => {
   const postSubmission = (formValues)=>{
 
     setOpenLoader(true);
-    handleBottombarClose();
+    openBottombar ?handleBottombarClose() :handleFreeTrialBottombarClose()
     postData(BASE_URL,formValues)
       .then(data => {
         setOpenLoader(false);
@@ -190,7 +197,7 @@ const GoogleWorkSpaceBusinessOriginal = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <Pricings data={pricings} handleBottombarOpen={handleBottombarOpen} reference={el3} />
+        <Pricings data={pricings} handleFreeTrialBottombarOpen={handleFreeTrialBottombarOpen} reference={el3} />
       </Section>
       <Section style={{paddingTop:0}}>
         <Divider />
@@ -226,6 +233,19 @@ const GoogleWorkSpaceBusinessOriginal = () => {
           >
             <div className={classes.contactForm}>
               <CustomContactForm postSubmission={postSubmission} />
+            </div>
+          </Drawer>
+        </Toolbar>
+      </AppBar>
+      <AppBar position="fixed" className={classes.appBarBottom}>
+        <Toolbar disableGutters className={classes.toolbarBottom}>
+          <Drawer
+            anchor="bottom"
+            open={openFreeTrialBottombar}
+            onClose={handleFreeTrialBottombarClose}
+          >
+            <div className={classes.contactForm}>
+              <FreeTrialForm postSubmission={postSubmission} />
             </div>
           </Drawer>
         </Toolbar>
