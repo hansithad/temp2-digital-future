@@ -94,6 +94,8 @@ const Booking = props => {
   const { postSubmission,className, ...rest } = props;
   const classes = useStyles();
 
+  const [isYearPickerOpen,setIsYearPickerOpen] = React.useState(false);
+  const [isClockPickerOpen,setIsClockPickerOpen] = React.useState(false);
   const [bookingDateError,setBookingDateError] = React.useState(false);
   const [bookingTimeError,setBookingTimeError] = React.useState(false);
   const [contactMethodError,setContactMethodError] = React.useState(false);
@@ -222,7 +224,9 @@ const Booking = props => {
   };
 
 
-
+  function disableWeekends(date) {
+    return date.getDay() === 0 || date.getDay() === 6;
+  }
 
   return (
     <div className={className} {...rest}>
@@ -255,9 +259,7 @@ const Booking = props => {
 
                   <MuiPickersUtilsProvider utils={DateFnsUtils}>
                     <KeyboardDatePicker
-                      disableToolbar
                       fullWidth
-                      variant="inline"
                       format="yyyy/MM/dd"
                       margin="normal"
                       id="date-picker-inline"
@@ -269,6 +271,11 @@ const Booking = props => {
                       }}
                       helperText={hasError('selectedDate') ? 'Please select valid date' : null}
                       error={hasError('selectedDate')}
+                      InputProps={{readOnly: true}}
+                      onClick={() => setIsYearPickerOpen(true)}
+                      open={isYearPickerOpen}
+                      onClose={() => setIsYearPickerOpen(false)}
+
                     />
                   </MuiPickersUtilsProvider>
                   {bookingDateError && (
@@ -292,6 +299,10 @@ const Booking = props => {
                         'aria-label': 'change time',
                       }}
                       keyboardIcon={<AccessTimeIcon />}
+                      InputProps={{readOnly: true}}
+                      onClick={() => setIsClockPickerOpen(true)}
+                      open={isClockPickerOpen}
+                      onClose={() => setIsClockPickerOpen(false)}
                     />
                   </MuiPickersUtilsProvider>
                   {bookingTimeError && (
