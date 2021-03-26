@@ -140,6 +140,20 @@ const GoogleWorkSpaceBusinessOriginal = () => {
       });
   };
 
+
+  const bookingPostSubmission = (formValues,callback)=>{
+    callback();
+    setOpenLoader(true);
+    postData(BASE_URL,
+      formValues)
+      .then(data => {
+        setOpenLoader(false);
+        setOpenSnack(true);
+      });
+
+
+  };
+
   return (
     <div className={classes.root}>
       <Section className={classes.pagePaddingTop}>
@@ -219,7 +233,7 @@ const GoogleWorkSpaceBusinessOriginal = () => {
         <Divider />
       </Section>
       <Section style={{paddingTop:0}}>
-        <Booking />
+        <Booking postSubmission={bookingPostSubmission} />
       </Section>
 
       <Divider />
