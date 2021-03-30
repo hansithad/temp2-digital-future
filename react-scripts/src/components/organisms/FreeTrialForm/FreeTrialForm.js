@@ -26,10 +26,8 @@ const schema = {
     length: {
       maximum: 300,
     },
-  },
-  numOfEmp: {
-    presence: { allowEmpty: false, message: 'is required' },
-  },
+  }
+
 };
 
 const FreeTrialForm = (props) => {
@@ -80,8 +78,7 @@ const FreeTrialForm = (props) => {
 
   const handleSubmit = (e)=>{
     e.preventDefault();
-    console.log(formState.values);
-    postSubmission({fullname:'','email':formState.values.email,'message':formState.values.numOfEmp});
+    postSubmission({fullname:'','email':formState.values.email,'message':'#### trial form #####'});
   };
 
   return (
@@ -113,36 +110,36 @@ const FreeTrialForm = (props) => {
               value={formState.values.email || ''}
             />
           </Grid>
-          <Grid item xs={12}>
-            <FormControl variant="outlined" className={classes.formControl} fullWidth>
-              <InputLabel id="num-of-employee-lb">Number of employees in your company *</InputLabel>
-              <Select
-                labelId="num-of-employee-label"
-                id="num-of-employee-select-outlined"
-                label="Number of employees in your company *"
-                name="numOfEmp"
-                fullWidth
-                helperText={hasError('numOfEmp') ? 'Number of employees is required' : null}
-                error={hasError('numOfEmp')}
-                onChange={handleChange}
-                value={formState.values.numOfEmp || ''}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={'1 Employee'}>It's just me</MenuItem>
-                <MenuItem value={'2-10 Employees'}>2-10 Employees</MenuItem>
-                <MenuItem value={'11-30 Employees'}>11-30 Employees</MenuItem>
-                <MenuItem value={'31-100 Employees'}>31-100 Employees</MenuItem>
-                <MenuItem value={'Above 100 Employees'}>Above 100 Employees</MenuItem>
-              </Select>
-              {hasError('numOfEmp') && (
-                <FormHelperText error id="numOfEmp-error">
-                  {hasError('numOfEmp') ? 'Number of employees is required' : null}
-                </FormHelperText>
-              )}
-            </FormControl>
-          </Grid>
+          {/*<Grid item xs={12}>*/}
+            {/*<FormControl variant="outlined" className={classes.formControl} fullWidth>*/}
+              {/*<InputLabel id="num-of-employee-lb">Number of employees in your company *</InputLabel>*/}
+              {/*<Select*/}
+                {/*labelId="num-of-employee-label"*/}
+                {/*id="num-of-employee-select-outlined"*/}
+                {/*label="Number of employees in your company *"*/}
+                {/*name="numOfEmp"*/}
+                {/*fullWidth*/}
+                {/*helperText={hasError('numOfEmp') ? 'Number of employees is required' : null}*/}
+                {/*error={hasError('numOfEmp')}*/}
+                {/*onChange={handleChange}*/}
+                {/*value={formState.values.numOfEmp || ''}*/}
+              {/*>*/}
+                {/*<MenuItem value="">*/}
+                  {/*<em>None</em>*/}
+                {/*</MenuItem>*/}
+                {/*<MenuItem value={'1 Employee'}>It's just me</MenuItem>*/}
+                {/*<MenuItem value={'2-10 Employees'}>2-10 Employees</MenuItem>*/}
+                {/*<MenuItem value={'11-30 Employees'}>11-30 Employees</MenuItem>*/}
+                {/*<MenuItem value={'31-100 Employees'}>31-100 Employees</MenuItem>*/}
+                {/*<MenuItem value={'Above 100 Employees'}>Above 100 Employees</MenuItem>*/}
+              {/*</Select>*/}
+              {/*{hasError('numOfEmp') && (*/}
+                {/*<FormHelperText error id="numOfEmp-error">*/}
+                  {/*{hasError('numOfEmp') ? 'Number of employees is required' : null}*/}
+                {/*</FormHelperText>*/}
+              {/*)}*/}
+            {/*</FormControl>*/}
+          {/*</Grid>*/}
           <Grid item xs={12}>
             <Typography variant="subtitle2" gutterBottom>
               Fields that are marked with * sign are required.
