@@ -23,9 +23,11 @@ import { SectionHeader, IconAlternate, TypedText } from 'components/molecules';
 import { CardProduct } from 'components/organisms';
 import validate from "validate.js";
 import FormHelperText from "@material-ui/core/FormHelperText";
+import coworkImg from './coworking.jpeg';
+import coworkBigImg from './coworking2x.jpeg';
 
 validate.validators.custom = function(value, options, key, attributes) {
-  console.log(value);
+
 
   /* Phone Test */
   var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
@@ -246,8 +248,8 @@ const Booking = props => {
             liftUp
             mediaContent={
               <Image
-                src="https://assets.maccarianagency.com/the-front/photos/coworking/place3.jpg"
-                srcSet="https://assets.maccarianagency.com/the-front/photos/coworking/place3@2x.jpg 2x"
+                src={coworkImg}
+                srcSet={coworkBigImg}
                 alt="Contact cover"
                 className={classes.formCover}
                 lazy={false}
