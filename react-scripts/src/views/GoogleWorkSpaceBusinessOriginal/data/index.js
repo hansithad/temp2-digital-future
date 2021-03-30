@@ -336,7 +336,7 @@ export const mobileFeatures = {
 export const pricings = [
   {
     title: 'Business Starter',
-    subtitle: 'A pay-once license, just for you',
+    subtitle: 'For Basic User Needs',
     price: '$5',
     oldPrice: '$6',
     priceSuffix: ' / MONTH/ USER',
@@ -354,7 +354,7 @@ export const pricings = [
   },
   {
     title: 'Business Standard',
-    subtitle: 'A pay-once license, just for you',
+    subtitle: 'For Advanced User Needs',
     price: '$9.5',
     priceSubHeader:'This package includes all of Business Starter functions and:',
     priceSubHeaderIndex:'sub_2',
@@ -372,7 +372,7 @@ export const pricings = [
   },
   {
     title: 'Business Plus',
-    subtitle: 'A pay-once license, just for you',
+    subtitle: 'For Advanced Security',
     price: '$14.5',
     priceSubHeader:'This package includes all of Business Standard functions and:',
     priceSubHeaderIndex:'sub_3',
