@@ -119,7 +119,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
             },
             {
               title: 'Talent Augmentation',
-              href: '/rental',
+              href: '/talent-augmentation',
             }
 
           ],
@@ -161,20 +161,16 @@ const Main = ({ children, themeToggler, themeMode }) => {
       id: 'supported-pages',
       children: {
         career: {
-          groupTitle: 'Digital Transformation',
+          groupTitle: 'Cloud Products',
           pages: [
             {
-              title: 'Data Strategy',
-              href: '/digital-transformation',
+              title: 'Google Workspace Business',
+              href: '/google-workspace-business',
             },
             {
-              title: 'Cloud Strategy',
-              href: '/digital-transformation',
-            },
-            {
-              title: 'Martech Strategy',
-              href: '/digital-transformation',
-            },
+              title: 'Cloud Data Warehouse',
+              href: '/cloud-data-warehouse',
+            }
           ],
         },
         helpCenter: {
