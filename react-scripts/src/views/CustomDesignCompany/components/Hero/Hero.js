@@ -22,7 +22,7 @@ const Hero = props => {
             titleVariant="h3"
             subtitle="Our mission is to help you boost your digital projects. Through consultancy services we help you quickly transform into a digital champion. With our temporary digital talent augmentation service we enhance your workforce, reducing costs and eliminating the risk of wrong hire in most critical moments."
             ctaGroup={[
-              <a href="/digital-transformation" title="Consultancy">
+              <a href="#dataStrategySection" title="Consultancy">
               <Button color="primary" variant="contained" size="large">
                 Consultancy
               </Button></a>,

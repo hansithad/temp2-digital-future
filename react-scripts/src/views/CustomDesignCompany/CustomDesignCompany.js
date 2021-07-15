@@ -202,7 +202,7 @@ const CustomDesignCompany = ({ themeMode }) => {
       <SectionAlternate className={classes.sectionAlternate}>
         <About />
       </SectionAlternate>
-      <Section style={{paddingTop:0}}>
+      <Section id={"dataStrategySection"} style={{paddingTop:0}}>
         <MobileApp imageUrl='monitor' imageSide='right' data={mobileapp1} />
         <MobileApp imageUrl='progressiveApp' imageSide='left' data={mobileapp2} />
       </Section>
