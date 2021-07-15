@@ -50,13 +50,14 @@ const About = props => {
                   >
                     Request a Demo
                   </Button>,
+                  <a href="#learnMoreSection" title="Consultancy">
                   <Button
                     variant="outlined"
                     color="primary"
                     size={isMd ? 'large' : 'medium'}
                   >
                     Learn More
-                  </Button>,
+                  </Button></a>
                 ]}
                 align={isMd ? 'left' : 'center'}
                 disableGutter

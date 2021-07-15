@@ -114,7 +114,7 @@ const Form = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Want to drop a quick query?"
+        title="How can we support you?"
         subtitle="Kindly fill out the below form adding your questions and contact details. We will connect back with you ASAP."
         subtitleProps={{
           variant: 'body1',

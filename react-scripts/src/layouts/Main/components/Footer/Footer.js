@@ -191,7 +191,7 @@ const Footer = props => {
                 variant="body2"
                 className={clsx(classes.navLink, 'submenu-item')}
               >
-                hello@digital-future.me
+                hello@thedfcloud.com
               </Typography>
             </ListItem>
           </List>

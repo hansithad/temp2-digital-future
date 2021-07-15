@@ -91,10 +91,10 @@ const CustomContactForm = (props) => {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography variant="h4" align="center">
-              <strong>Contact Us</strong>
+              <strong>How can we support you?</strong>
             </Typography>
             <Typography variant="h6" color="textSecondary" align="center">
-              We carefully read and answer to all our emails.
+              We reply to contact messages ASAP
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6}>
